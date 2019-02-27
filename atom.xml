@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-27T05:32:35.260Z</updated>
+  <updated>2019-02-27T17:41:00.256Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>arti1</title>
+    <title>软件的本质与软件工程科学</title>
     <link href="http://yoursite.com/2019/02/27/arti1/"/>
     <id>http://yoursite.com/2019/02/27/arti1/</id>
     <published>2019-02-27T05:32:35.000Z</published>
-    <updated>2019-02-27T05:32:35.260Z</updated>
+    <updated>2019-02-27T17:41:00.256Z</updated>
     
     <summary type="html">
     
+      &lt;h3 id=&quot;软件工程的定义&quot;&gt;&lt;a href=&quot;#软件工程的定义&quot; class=&quot;headerlink&quot; title=&quot;软件工程的定义&quot;&gt;&lt;/a&gt;软件工程的定义&lt;/h3&gt;&lt;p&gt;a) 软件工程是指将系统化、规范化、可度量的方法应用于软件的开发、运行和维护中，即，将工程化的方法应用于软件。&lt;br&gt;b) 同时，针对上述行为的相关方法的研究也是软件工程。&lt;br&gt;
+    
     </summary>
     
+      <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
+    
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
+    
+      <category term="commit" scheme="http://yoursite.com/tags/commit/"/>
     
   </entry>
   
