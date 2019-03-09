@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-08T11:27:13.048Z</updated>
+  <updated>2019-03-09T13:01:43.852Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="http://yoursite.com/2019/03/07/hw2/"/>
     <id>http://yoursite.com/2019/03/07/hw2/</id>
     <published>2019-03-07T02:21:25.000Z</published>
-    <updated>2019-03-08T11:27:13.048Z</updated>
+    <updated>2019-03-09T13:01:43.852Z</updated>
     
     <summary type="html">
     
       &lt;h4 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;用简短语言给出分析与设计的理解&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;用简短语言给出分析与设计的理解&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;分析与设计的过程就是对客户提出的需求进行系统的研究，并在研究过程中对其进行精简和整理，分析过后得到可行的有价值的需求版本，然后再对其进行具体的功能与界面的设计，从而提出软件制品的可行方案。&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
@@ -34,9 +34,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="point" scheme="http://yoursite.com/tags/point/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="point" scheme="http://yoursite.com/tags/point/"/>
     
   </entry>
   
@@ -63,7 +63,7 @@
     <link href="http://yoursite.com/2019/02/27/hw1/"/>
     <id>http://yoursite.com/2019/02/27/hw1/</id>
     <published>2019-02-27T05:32:35.000Z</published>
-    <updated>2019-03-03T05:26:04.850Z</updated>
+    <updated>2019-03-08T11:31:51.954Z</updated>
     
     <summary type="html">
     
@@ -76,7 +76,7 @@
     
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
-      <category term="commit" scheme="http://yoursite.com/tags/commit/"/>
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
   </entry>
   
