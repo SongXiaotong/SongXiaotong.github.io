@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-16T07:16:15.229Z</updated>
+  <updated>2019-03-16T07:17:38.471Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,18 +21,14 @@
     <link href="http://yoursite.com/2019/03/13/system-design-hw3/"/>
     <id>http://yoursite.com/2019/03/13/system-design-hw3/</id>
     <published>2019-03-13T08:50:47.000Z</published>
-    <updated>2019-03-16T07:16:15.229Z</updated>
+    <updated>2019-03-16T07:17:38.471Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点&quot;&gt;&lt;a href=&quot;#瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点&quot; class=&quot;headerlink&quot; title=&quot;瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点&quot;&gt;&lt;/a&gt;瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;瀑布模型&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;（1） 优点&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    a） 瀑布模型的流程符合客观的开发方式&lt;/p&gt;
-&lt;p&gt;​    c） 有利于软件开发方法和工具的研究，从而提高了大型软件项目开发的质量和效率。 &lt;/p&gt;
-&lt;p&gt;​    d） 理论上当前一阶段的工作完成，人们只需要关注后续的部分&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;（2） 缺点&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    a）瀑布模型的各个环节前后相连， 开发过程不能逆转，出现调整时代价过大&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;​    a） 瀑布模型的流程符合客观的开发方式&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
