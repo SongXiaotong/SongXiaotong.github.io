@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T09:59:24.724Z</updated>
+  <updated>2019-03-18T16:03:40.449Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/18/Regular-Expression/"/>
     <id>http://yoursite.com/2019/03/18/Regular-Expression/</id>
     <published>2019-03-18T07:00:22.000Z</published>
-    <updated>2019-03-18T09:59:24.724Z</updated>
+    <updated>2019-03-18T16:03:40.449Z</updated>
     
     <summary type="html">
     
@@ -101,11 +101,11 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
       <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
