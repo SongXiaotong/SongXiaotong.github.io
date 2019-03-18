@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T16:18:31.606Z</updated>
+  <updated>2019-03-18T16:22:10.139Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/19/DES/"/>
     <id>http://yoursite.com/2019/03/19/DES/</id>
     <published>2019-03-18T16:06:57.000Z</published>
-    <updated>2019-03-18T16:18:31.606Z</updated>
+    <updated>2019-03-18T16:22:10.139Z</updated>
     
     <summary type="html">
     
@@ -47,7 +47,7 @@
     <link href="http://yoursite.com/2019/03/18/Regular-Expression/"/>
     <id>http://yoursite.com/2019/03/18/Regular-Expression/</id>
     <published>2019-03-18T07:00:22.000Z</published>
-    <updated>2019-03-18T16:03:40.449Z</updated>
+    <updated>2019-03-18T16:22:29.282Z</updated>
     
     <summary type="html">
     
@@ -59,6 +59,8 @@
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="re" scheme="http://yoursite.com/tags/re/"/>
     
   </entry>
   
