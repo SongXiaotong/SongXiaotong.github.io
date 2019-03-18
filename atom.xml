@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-16T07:21:34.042Z</updated>
+  <updated>2019-03-18T09:59:24.724Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Regular_Expression——正则表达式</title>
+    <link href="http://yoursite.com/2019/03/18/Regular-Expression/"/>
+    <id>http://yoursite.com/2019/03/18/Regular-Expression/</id>
+    <published>2019-03-18T07:00:22.000Z</published>
+    <updated>2019-03-18T09:59:24.724Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;正则表达式概念&quot;&gt;&lt;a href=&quot;#正则表达式概念&quot; class=&quot;headerlink&quot; title=&quot;正则表达式概念&quot;&gt;&lt;/a&gt;正则表达式概念&lt;/h3&gt;&lt;p&gt;​    正则表达式是对字符串操作的一种逻辑公式，是用事先定义好的一些特定字符、及这些特定字符的组合，组成一种规则字符串，从而表达一种过滤逻辑。在程序设计中，通常使用正则表达式来检索和替换那些符合某种规则（模式）的文本。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>软件项目过程模型与规划</title>
@@ -35,9 +55,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
-    
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
+    
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
   </entry>
   
@@ -59,9 +79,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
-    
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
+    
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
   </entry>
   
@@ -70,7 +90,7 @@
     <link href="http://yoursite.com/2019/03/06/Min-Edit-Distance/"/>
     <id>http://yoursite.com/2019/03/06/Min-Edit-Distance/</id>
     <published>2019-03-06T11:56:17.000Z</published>
-    <updated>2019-03-18T06:51:20.571Z</updated>
+    <updated>2019-03-18T07:02:00.018Z</updated>
     
     <summary type="html">
     
@@ -82,6 +102,10 @@
     
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
+    
+      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -101,9 +125,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
-    
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
+    
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
   </entry>
   
