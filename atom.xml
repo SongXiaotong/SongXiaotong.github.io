@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T16:22:10.139Z</updated>
+  <updated>2019-03-18T16:30:19.739Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,11 @@
     <link href="http://yoursite.com/2019/03/19/DES/"/>
     <id>http://yoursite.com/2019/03/19/DES/</id>
     <published>2019-03-18T16:06:57.000Z</published>
-    <updated>2019-03-18T16:22:10.139Z</updated>
+    <updated>2019-03-18T16:30:19.739Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;DES简介&quot;&gt;&lt;a href=&quot;#DES简介&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;DES简介&quot;&gt;&lt;a href=&quot;#DES简介&quot; class=&quot;headerlink&quot; title=&quot;DES简介&quot;&gt;&lt;/a&gt;DES简介&lt;/h2&gt;&lt;p&gt;DES是一种对称密码体制加密算法，明文和密钥均由64位二进制位构成，其中，密钥实际作用位共56位（第8的整数倍的位均为奇偶校验位，使密钥中8个为一组的二进制位组中保证有奇数个1，不发生作用）&lt;/p&gt;
     
     </summary>
     
