@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="sql,">
 
 
 
@@ -81,14 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="对sql语句的基础语法以及一些细节操作进行了总结">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Database——sql">
+<meta property="og:url" content="http://yoursite.com/2019/03/24/database/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
+<meta property="og:description" content="对sql语句的基础语法以及一些细节操作进行了总结">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:updated_time" content="2019-03-18T04:59:22.244Z">
+<meta property="og:updated_time" content="2019-03-24T15:54:18.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Database——sql">
+<meta name="twitter:description" content="对sql语句的基础语法以及一些细节操作进行了总结">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/24/database/">
 
 
 
 
 
-  <title>categories | Trevi Fountain</title>
+  <title>Database——sql | Trevi Fountain</title>
   
 
 
@@ -281,40 +285,200 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/database/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                4 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/database/">database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/">system-design</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-security/">web-security</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Database——sql</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-24T22:51:43+08:00">
+                2019-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">database</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>对sql语句的基础语法以及一些细节操作进行了总结<br><a id="more"></a></p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ol>
+<li><p>检索：SELECT  <target> FROM <table name> WHERE <conditions></conditions></table></target></p>
+</li>
+<li><p>删除：DELETE FROM <table name> WHERE <conditions></conditions></table></p>
+</li>
+<li><p>更新：UPDATE <table name> SET &lt;&gt; END</table></p>
+</li>
+<li><p>排序：ORDER BY</p>
+</li>
+<li><p>分组：GROUP BY  HAVING</p>
+</li>
+<li><p>排序：DESC/ASC</p>
+</li>
+<li><p>连接：<table1> INNER/LEFT/RIGHT JOIN  <table2> ON <conditons></conditons></table2></table1></p>
+<p>inner 是内连接，当两个表的内容都能匹配的时候才形成连接</p>
+<p>left是左连接，除了两个表可以匹配的内容以外，table1表中无法形成新连接的部分也会被选取出来</p>
+<p>right是右连接，除了两个表可以匹配的内容以外，table2表中无法形成新连接的部分也会被选取出来</p>
+</li>
+</ol>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><ol>
+<li>命名表头：SELECT <column1> as <name></name></column1></li>
+<li>命名检索结果：（SELECT ……） AS <table name></table></li>
+<li>COUNT()：计数</li>
+<li>COALESCE(element1, element2, ……)：从element1开始检测是否为null，直到遇到非null值便返回，如果全是null最终返回null</li>
+<li>IF(<condition>， <ture>,  <false>)：如果condition为true，返回第二个参数值，如果为false返回第三个参数值</false></ture></condition></li>
+<li>IFNULL(<target>, <value>)：和coalesce类似</value></target></li>
+<li>CASE <target> WHEN <value1> THEN &lt;&gt; ELSE：</value1></target></li>
+<li>DISTINCT：去重</li>
+<li>DATEDIFF(date1， date2)：返回两个date之间相差的天数</li>
+<li>BETWEEEN AND：包括左右边界的范围，可以对日期字符串操作</li>
+<li>&lt;&gt;：不等号</li>
+<li>:= ：赋值号</li>
+<li>逻辑：AND OR</li>
+</ol>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sql/" rel="tag"># sql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/24/max-match-alg/" rel="next" title="Maximum matching algorithm">
+                <i class="fa fa-chevron-left"></i> Maximum matching algorithm
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -347,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -417,6 +590,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法"><span class="nav-number">2.</span> <span class="nav-text">用法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

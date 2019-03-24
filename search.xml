@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Database——sql]]></title>
+    <url>%2F2019%2F03%2F24%2Fdatabase%2F</url>
+    <content type="text"><![CDATA[对sql语句的基础语法以及一些细节操作进行了总结 语法 检索：SELECT FROM WHERE 删除：DELETE FROM WHERE 更新：UPDATE SET &lt;&gt; END 排序：ORDER BY 分组：GROUP BY HAVING 排序：DESC/ASC 连接： INNER/LEFT/RIGHT JOIN ON inner 是内连接，当两个表的内容都能匹配的时候才形成连接 left是左连接，除了两个表可以匹配的内容以外，table1表中无法形成新连接的部分也会被选取出来 right是右连接，除了两个表可以匹配的内容以外，table2表中无法形成新连接的部分也会被选取出来 用法 命名表头：SELECT as 命名检索结果：（SELECT ……） AS COUNT()：计数 COALESCE(element1, element2, ……)：从element1开始检测是否为null，直到遇到非null值便返回，如果全是null最终返回null IF(， , )：如果condition为true，返回第二个参数值，如果为false返回第三个参数值 IFNULL(, )：和coalesce类似 CASE WHEN THEN &lt;&gt; ELSE： DISTINCT：去重 DATEDIFF(date1， date2)：返回两个date之间相差的天数 BETWEEEN AND：包括左右边界的范围，可以对日期字符串操作 &lt;&gt;：不等号 := ：赋值号 逻辑：AND OR]]></content>
+      <categories>
+        <category>database</category>
+      </categories>
+      <tags>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Maximum matching algorithm]]></title>
     <url>%2F2019%2F03%2F24%2Fmax-match-alg%2F</url>
     <content type="text"><![CDATA[在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。 最大匹配算法分为三个方向，分别是正向最大匹配算法（Forward MM, FMM）、逆向最大匹配算法（Backward MM, BMM）、双向最大匹配算法（Bi-directional MM,） 正向最大匹配算法正向最大匹配算法是指从字符串起始端使用最大匹配算法进行分割。 首先从语料库中找到能够进行匹配的最长字符串长度L，也就是每次分割都要对这个最长长度进行检测。 当当前的文本前L个字符组成的字符串无法与语料库中的成分进行匹配时，就将检测的字符串长度-1，也就是检测前L-1长度的字符串，如果还是不行，就继续-1，如此循环。 此时，我们可以发现，整个算法过程是以能够匹配到的最大长度的字符串开始匹配，然后逐个排除并将目标长度减短1，从而得到最终的正向最大匹配结果。 123456789从第一个字符开始while 还有待检测字符 以理想最长匹配长度进行匹配 if 匹配成功 文本去除已匹配字符串 else if 匹配失败，但仍有减短长度的空间 匹配长度-1，重新匹配 else 将当前字符去除 逆向最大匹配算法逆向最大匹配算法与正向相同，但是起始检测字符不是起始字符，而是结尾字符 123456789从最后一个字符开始while 还有待检测字符 以理想最长匹配长度进行匹配 if 匹配成功 文本去除已匹配字符串 else if 匹配失败，但仍有减短长度的空间 匹配长度-1，重新匹配 else 将当前字符去除 双向最大匹配算法双向最大匹配算法是逆向最大匹配算法与正向最大匹配算法的结合，当正向效果较好时就采用正向效果，当逆向效果较好时便采用逆向效果，通常用分解出来的字符串数目进行效果的检验。]]></content>
@@ -23,7 +34,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Regular_Expression——正则表达式]]></title>
+    <title><![CDATA[Regular_Expression]]></title>
     <url>%2F2019%2F03%2F18%2FRegular-Expression%2F</url>
     <content type="text"><![CDATA[正则表达式概念​ 正则表达式是对字符串操作的一种逻辑公式，是用事先定义好的一些特定字符、及这些特定字符的组合，组成一种规则字符串，从而表达一种过滤逻辑。在程序设计中，通常使用正则表达式来检索和替换那些符合某种规则（模式）的文本。 python编译正则表达式使用python编译正则表达式时，需要引入re模块，此时可以使用正则表达式的所有功能1. re.compile(parttern[, flags]) 将正则表达式进行编译，从而使用其所有的功能，返回RegexObject对象 2. re.match(pattern, string, flags=0) 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match就范围none 3. re.search(pattern, string, flags=0) 扫描整个字符串并返回第一个成功的匹配。 4. re.sub(pattern, repl, string, count=0, flags=0) 替换字符串中的匹配项 5. re.compile().findall(string[, pos[, endpos]]) 在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表 6. re.split(pattern, string[, maxsplit=0, flags=0]) 按照匹配的子串将字符串分割后返回列表 7. re.compile().match().group() group参数为0时返回得到的结果，否则为第n个子串 参数 描述 备注 pattern 正则表达式 pattern = r’sa{1,2}s’ string 目标字符串 string = r’saas sas ssaads ssas’ flags 匹配模式，如大小写等 repl 替换的字符串 可以为一个函数 count 模式匹配后替换的最大次数 默认0表示替换所有 pos 起始位置 endpos 结束位置 maxsplit 分割次数 默认0为不限制次数 简洁正则表达式 正则表达式 匹配字符 [0-9] 0123456789任意之一 [a-z] 任意小写字母 [A-Z] 人以大写字母 \d 等同于[0-9] \D 等同于[^0-9] \w 等同于[a-z0-9A-Z_],匹配大小写字母数字和下划线 \W 等同于[^a-z0-9A-Z_] \s 任何空白字符，包括空格、制表符、换页符等，[ \f\n\r\t\v] \S 任何非空白字符，[^ \f\n\r\t\v] 正则表达式元字符 元字符 匹配规则 示例 [] 匹配括号中任意一个字符 [adegS] [^] 匹配括号内字符外都能匹配 [^fda] . 匹配任意一个字符，需要匹配该符号时使用\转义 . + 前一个字符重复1次或多次，尽可能贪婪地多匹配 a+ ? 前一个字符出现0次或1次， a? +？ 前一个字符重复1次或多次，将贪婪转为懒惰 fds+?f * 前一个字符重复0次或多次，*？同理 a* {a, b} a&lt;=前一个字符匹配次数&lt;=b；b省略逗号保留表示至少；逗号和b一同省略表示准确数目 a{1,2}s &#124; 逻辑或操作符 a&#124;b - 定义一个区间 a-c \ 对下一个字符取非（通常是转义作用） ^ 匹配字符串的开头 ^a $ 匹配字符串的结束 a$ {\b] 退格字符 \c 匹配一个控制字符 \t 匹配一个制表符 正则表达式修饰符——可选标志 修饰符 描述 re.I 使匹配对大小写不敏感 re.L 做本地化识别匹配 re.M 多行匹配，影响^和$ re.S 使 . 匹配包括换行在内的所有字符 re.U 根据Unicode字符集解析字符，影响\w \W \b \B re.X 给予灵活的格式，以便将正则表达式写得更加易于理解 python练习题目：在字符串sysu@hotmail.edu.cn中匹配出@hotmail. 示例代码1（错误示例） 123456# 错误使用贪婪匹配，导致输出结果为@hotmail.edu.import rekey = r"sysu@hotmail.edu.cn"p1 = r"@.+\."pattern1 = re.compile(p1)print(partten1.findall(key)) 示例代码2——懒惰匹配12345import rekey = r"sysu@hotmail.edu.cn"p1 = r"@.+?\."pattern1 = re.compile(p1)print(partten1.findall(key)) 示例代码3——非懒惰匹配12345import rekey = r"sysu@hotmail.edu.cn"p1 = r"@[^\.]+\."pattern1 = re.compile(p1)print(partten1.findall(key))]]></content>
       <categories>
@@ -59,7 +70,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Min Edit Distance——最短编辑距离]]></title>
+    <title><![CDATA[Min Edit Distance]]></title>
     <url>%2F2019%2F03%2F06%2FMin-Edit-Distance%2F</url>
     <content type="text"><![CDATA[用例问：最少操作多少次可以把字符串T变为S？例：S=“ABCF”，T=“DBFG”则可以 把D替换为A 删掉G 插入C 最短编辑距离概念给定两个字符串S和T，对于T，我们允许如下三个操作 在任意位置添加任一字符 删除存在的任一字符 修改任一字符 将字符串T转换成成字符串S所使用的操作次数就是编辑距离，其中，最少的操作次数就是最短编辑距离（Min Edit Distance） 算法逻辑详解向S和T中分别插入字符-，使得两个字符串相同字符尽量对齐，且两个字符串最终长度相同 如果S，T对应位置都是相同的普通字符，则不扣分，如位置2、4 如果S，T对应位置都是普通字符但不相同，则扣1分（对应修改操作），如位置1 如果S的位置为-，但是T位置是不同字符，则扣1分（对应删除操作），如位置5 如果S的位置为普通字符，但是T位置为-，则扣1分（对应增加操作），如位置3 设f(i, j)表示字符串S的前i位和T的前j位对齐后的最少扣分，则最后一位的对齐情况为 当S[i] == T[j] 时，前i-1和j-1位已经完成对齐，此时最小扣分为f(i-1, j-1) 当S[i] != T[j]时，此时最少扣分为f(i-1, j-1)+1 当S前i位和T的前j-1位已经对齐，此时最少扣分为f(i, j-1)+1 当S前i-1位和T的前j位对齐，此时最少扣分为f(i-1, j)+1 定义一个函数same(i, j)，如果S[i] == T[j]则为0表示不扣分，否则为1也就是扣分，此时f的递推表达式如下 f(i, j) = min{ f(i-1, j-1)+same(i-1, j-1), f(i-1, j)+1, f(i, j-1)+1} 初始值：f(0, j) = j, f(i, 0) = i 动态规划算法定义一个矩阵dp[m][n], 其中m=len(string1)+1，n=len(string2)+1，+1是为了避免长度为0；dp[i][j]为string1的前i个字符构成的字符串，与string2的前j个字符构成的字符串的编辑距离。 插入操作：在string1的前i个字符后插入一个新的字符，使得插入的字符等于新加入的string2[j]，插入操作对于string1来说，i没有前进，但是对于string2来说，j前进了一位，也就是说，dp[i][j] = dp[i]dp[j-1]+1 删除操作：在string1的第i个字符后删除一个字符，使得删除后的字符串string1[:i-1]与word[:j]相同，那么删除操作对于原string2来说，j没有前进，但是i前进了一位，也就是说，dp[i][j] = dp[i-1][j]+(0/1) 伪代码123456789101112131415# 初始化过程for j=0 to n do f[j] = jendfor# 连续处理for i=1 to m do last = f[0] f[0] = i for j=1 to n do temp = f[i, j] f[i, j] = min(last+same(i, 1), remp+1, temp+1, f[j-1]+1) last = temp endforendfor]]></content>
       <categories>

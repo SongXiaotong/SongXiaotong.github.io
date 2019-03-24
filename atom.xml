@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T14:43:05.786Z</updated>
+  <updated>2019-03-24T15:54:18.938Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Database——sql</title>
+    <link href="http://yoursite.com/2019/03/24/database/"/>
+    <id>http://yoursite.com/2019/03/24/database/</id>
+    <published>2019-03-24T14:51:43.000Z</published>
+    <updated>2019-03-24T15:54:18.938Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对sql语句的基础语法以及一些细节操作进行了总结&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="database" scheme="http://yoursite.com/categories/database/"/>
+    
+    
+      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>Maximum matching algorithm</title>
@@ -57,11 +77,11 @@
   </entry>
   
   <entry>
-    <title>Regular_Expression——正则表达式</title>
+    <title>Regular_Expression</title>
     <link href="http://yoursite.com/2019/03/18/Regular-Expression/"/>
     <id>http://yoursite.com/2019/03/18/Regular-Expression/</id>
     <published>2019-03-18T07:00:22.000Z</published>
-    <updated>2019-03-18T16:22:29.282Z</updated>
+    <updated>2019-03-24T14:51:08.376Z</updated>
     
     <summary type="html">
     
@@ -128,11 +148,11 @@
   </entry>
   
   <entry>
-    <title>Min Edit Distance——最短编辑距离</title>
+    <title>Min Edit Distance</title>
     <link href="http://yoursite.com/2019/03/06/Min-Edit-Distance/"/>
     <id>http://yoursite.com/2019/03/06/Min-Edit-Distance/</id>
     <published>2019-03-06T11:56:17.000Z</published>
-    <updated>2019-03-18T07:02:00.018Z</updated>
+    <updated>2019-03-24T14:51:18.389Z</updated>
     
     <summary type="html">
     
