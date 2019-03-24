@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="algorithm,">
 
 
 
@@ -81,14 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
+<meta name="keywords" content="algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maximum matching algorithm">
+<meta property="og:url" content="http://yoursite.com/2019/03/24/max-match-alg/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
+<meta property="og:description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:updated_time" content="2019-02-27T16:45:58.751Z">
+<meta property="og:updated_time" content="2019-03-24T14:43:05.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="Maximum matching algorithm">
+<meta name="twitter:description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/24/max-match-alg/">
 
 
 
 
 
-  <title>about | Trevi Fountain</title>
+  <title>Maximum matching algorithm | Trevi Fountain</title>
   
 
 
@@ -281,33 +285,176 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/max-match-alg/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Maximum matching algorithm</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-24T22:14:10+08:00">
+                2019-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。</p>
+<a id="more"></a>
+<p>最大匹配算法分为三个方向，分别是正向最大匹配算法（Forward MM,  FMM）、逆向最大匹配算法（Backward MM, BMM）、双向最大匹配算法（Bi-directional MM,）</p>
+<h2 id="正向最大匹配算法"><a href="#正向最大匹配算法" class="headerlink" title="正向最大匹配算法"></a>正向最大匹配算法</h2><p>正向最大匹配算法是指从字符串起始端使用最大匹配算法进行分割。</p>
+<p>首先从语料库中找到能够进行匹配的最长字符串长度L，也就是每次分割都要对这个最长长度进行检测。</p>
+<p>当当前的文本前L个字符组成的字符串无法与语料库中的成分进行匹配时，就将检测的字符串长度-1，也就是检测前L-1长度的字符串，如果还是不行，就继续-1，如此循环。</p>
+<p>此时，我们可以发现，整个算法过程是以能够匹配到的最大长度的字符串开始匹配，然后逐个排除并将目标长度减短1，从而得到最终的正向最大匹配结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">从第一个字符开始</span><br><span class="line">while 还有待检测字符</span><br><span class="line">	以理想最长匹配长度进行匹配</span><br><span class="line">	if 匹配成功</span><br><span class="line">		文本去除已匹配字符串</span><br><span class="line">	else if 匹配失败，但仍有减短长度的空间 </span><br><span class="line">		匹配长度-1，重新匹配</span><br><span class="line">	else</span><br><span class="line">		将当前字符去除</span><br></pre></td></tr></table></figure>
+<h2 id="逆向最大匹配算法"><a href="#逆向最大匹配算法" class="headerlink" title="逆向最大匹配算法"></a>逆向最大匹配算法</h2><p>逆向最大匹配算法与正向相同，但是起始检测字符不是起始字符，而是结尾字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">从最后一个字符开始</span><br><span class="line">while 还有待检测字符</span><br><span class="line">	以理想最长匹配长度进行匹配</span><br><span class="line">	if 匹配成功</span><br><span class="line">		文本去除已匹配字符串</span><br><span class="line">	else if 匹配失败，但仍有减短长度的空间 </span><br><span class="line">		匹配长度-1，重新匹配</span><br><span class="line">	else</span><br><span class="line">		将当前字符去除</span><br></pre></td></tr></table></figure>
+<h2 id="双向最大匹配算法"><a href="#双向最大匹配算法" class="headerlink" title="双向最大匹配算法"></a>双向最大匹配算法</h2><p>双向最大匹配算法是逆向最大匹配算法与正向最大匹配算法的结合，当正向效果较好时就采用正向效果，当逆向效果较好时便采用逆向效果，通常用分解出来的字符串数目进行效果的检验。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/19/DES/" rel="next" title="Data Encryption Standard">
+                <i class="fa fa-chevron-left"></i> Data Encryption Standard
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -340,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -410,6 +566,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正向最大匹配算法"><span class="nav-number">1.</span> <span class="nav-text">正向最大匹配算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逆向最大匹配算法"><span class="nav-number">2.</span> <span class="nav-text">逆向最大匹配算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双向最大匹配算法"><span class="nav-number">3.</span> <span class="nav-text">双向最大匹配算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
