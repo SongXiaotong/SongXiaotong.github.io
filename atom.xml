@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T15:54:18.938Z</updated>
+  <updated>2019-03-25T08:00:07.210Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>nltk</title>
+    <link href="http://yoursite.com/2019/03/25/nltk/"/>
+    <id>http://yoursite.com/2019/03/25/nltk/</id>
+    <published>2019-03-25T07:22:19.000Z</published>
+    <updated>2019-03-25T08:00:07.210Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ntlk是一个比较常用的用于自然语言处理的python库，在这篇文章中，将会对ntlk的使用进行总结和归纳。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/SongXiaotong/NLP_KG/tree/master/preprocess&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;相关代码示例&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Database——sql</title>
     <link href="http://yoursite.com/2019/03/24/database/"/>
     <id>http://yoursite.com/2019/03/24/database/</id>
     <published>2019-03-24T14:51:43.000Z</published>
-    <updated>2019-03-24T15:54:18.938Z</updated>
+    <updated>2019-03-24T17:07:51.526Z</updated>
     
     <summary type="html">
     

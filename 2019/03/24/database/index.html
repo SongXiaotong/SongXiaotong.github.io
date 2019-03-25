@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Trevi Fountain">
 <meta property="og:description" content="对sql语句的基础语法以及一些细节操作进行了总结">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:updated_time" content="2019-03-24T15:54:18.938Z">
+<meta property="og:updated_time" content="2019-03-24T17:07:51.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Database——sql">
 <meta name="twitter:description" content="对sql语句的基础语法以及一些细节操作进行了总结">
@@ -388,11 +388,11 @@
       
         <p>对sql语句的基础语法以及一些细节操作进行了总结<br><a id="more"></a></p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ol>
-<li><p>检索：SELECT  <target> FROM <table name> WHERE <conditions></conditions></table></target></p>
+<li><p>检索：SELECT  <target> FROM &lt;table_name&gt; WHERE <conditions></conditions></target></p>
 </li>
-<li><p>删除：DELETE FROM <table name> WHERE <conditions></conditions></table></p>
+<li><p>删除：DELETE FROM &lt;table_name&gt; WHERE <conditions></conditions></p>
 </li>
-<li><p>更新：UPDATE <table name> SET &lt;&gt; END</table></p>
+<li><p>更新：UPDATE &lt;table_name&gt; SET &lt;&gt; END</p>
 </li>
 <li><p>排序：ORDER BY</p>
 </li>
@@ -408,7 +408,7 @@
 </ol>
 <h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><ol>
 <li>命名表头：SELECT <column1> as <name></name></column1></li>
-<li>命名检索结果：（SELECT ……） AS <table name></table></li>
+<li>命名检索结果：（SELECT ……） AS &lt;table_name&gt;</li>
 <li>COUNT()：计数</li>
 <li>COALESCE(element1, element2, ……)：从element1开始检测是否为null，直到遇到非null值便返回，如果全是null最终返回null</li>
 <li>IF(<condition>， <ture>,  <false>)：如果condition为true，返回第二个参数值，如果为false返回第三个参数值</false></ture></condition></li>
@@ -460,6 +460,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/25/nltk/" rel="prev" title="nltk">
+                nltk <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -538,7 +542,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

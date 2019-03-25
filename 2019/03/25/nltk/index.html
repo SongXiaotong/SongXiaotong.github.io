@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="algorithm,">
+  <meta name="keywords" content="python,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
-<meta name="keywords" content="algorithm">
+<meta name="description" content="ntlk是一个比较常用的用于自然语言处理的python库，在这篇文章中，将会对ntlk的使用进行总结和归纳。 相关代码示例">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maximum matching algorithm">
-<meta property="og:url" content="http://yoursite.com/2019/03/24/max-match-alg/index.html">
+<meta property="og:title" content="nltk">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/nltk/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
-<meta property="og:description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
+<meta property="og:description" content="ntlk是一个比较常用的用于自然语言处理的python库，在这篇文章中，将会对ntlk的使用进行总结和归纳。 相关代码示例">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:updated_time" content="2019-03-24T14:43:05.786Z">
+<meta property="og:updated_time" content="2019-03-25T08:00:07.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maximum matching algorithm">
-<meta name="twitter:description" content="在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。">
+<meta name="twitter:title" content="nltk">
+<meta name="twitter:description" content="ntlk是一个比较常用的用于自然语言处理的python库，在这篇文章中，将会对ntlk的使用进行总结和归纳。 相关代码示例">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/24/max-match-alg/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/25/nltk/">
 
 
 
 
 
-  <title>Maximum matching algorithm | Trevi Fountain</title>
+  <title>nltk | Trevi Fountain</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/max-match-alg/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/25/nltk/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Xiaotong">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Maximum matching algorithm</h1>
+          <h1 class="post-title" itemprop="name headline">nltk</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-24T22:14:10+08:00">
-                2019-03-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-25T15:22:19+08:00">
+                2019-03-25
               </time>
             
 
@@ -386,17 +386,79 @@
       
 
       
-        <p>在基于某些规则利用语料库对目标文本进行分词时，会使用最大匹配法（Maximum Matching， MM），也就是在匹配过程中，每次词汇的分割都将当前能够比配到的最长的字符串分割出来，即输入为一行未被划分的文本，输出为按照匹配规则分隔好的词汇。</p>
+        <p>ntlk是一个比较常用的用于自然语言处理的python库，在这篇文章中，将会对ntlk的使用进行总结和归纳。</p>
+<p><a href="https://github.com/SongXiaotong/NLP_KG/tree/master/preprocess" target="_blank" rel="noopener">相关代码示例</a></p>
 <a id="more"></a>
-<p>最大匹配算法分为三个方向，分别是正向最大匹配算法（Forward MM,  FMM）、逆向最大匹配算法（Backward MM, BMM）、双向最大匹配算法（Bi-directional MM,）</p>
-<h2 id="正向最大匹配算法"><a href="#正向最大匹配算法" class="headerlink" title="正向最大匹配算法"></a>正向最大匹配算法</h2><p>正向最大匹配算法是指从字符串起始端使用最大匹配算法进行分割。</p>
-<p>首先从语料库中找到能够进行匹配的最长字符串长度L，也就是每次分割都要对这个最长长度进行检测。</p>
-<p>当当前的文本前L个字符组成的字符串无法与语料库中的成分进行匹配时，就将检测的字符串长度-1，也就是检测前L-1长度的字符串，如果还是不行，就继续-1，如此循环。</p>
-<p>此时，我们可以发现，整个算法过程是以能够匹配到的最大长度的字符串开始匹配，然后逐个排除并将目标长度减短1，从而得到最终的正向最大匹配结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">从第一个字符开始</span><br><span class="line">while 还有待检测字符</span><br><span class="line">	以理想最长匹配长度进行匹配</span><br><span class="line">	if 匹配成功</span><br><span class="line">		文本去除已匹配字符串</span><br><span class="line">	else if 匹配失败，但仍有减短长度的空间 </span><br><span class="line">		匹配长度-1，重新匹配</span><br><span class="line">	else</span><br><span class="line">		将当前字符去除</span><br></pre></td></tr></table></figure>
-<h2 id="逆向最大匹配算法"><a href="#逆向最大匹配算法" class="headerlink" title="逆向最大匹配算法"></a>逆向最大匹配算法</h2><p>逆向最大匹配算法与正向相同，但是起始检测字符不是起始字符，而是结尾字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">从最后一个字符开始</span><br><span class="line">while 还有待检测字符</span><br><span class="line">	以理想最长匹配长度进行匹配</span><br><span class="line">	if 匹配成功</span><br><span class="line">		文本去除已匹配字符串</span><br><span class="line">	else if 匹配失败，但仍有减短长度的空间 </span><br><span class="line">		匹配长度-1，重新匹配</span><br><span class="line">	else</span><br><span class="line">		将当前字符去除</span><br></pre></td></tr></table></figure>
-<h2 id="双向最大匹配算法"><a href="#双向最大匹配算法" class="headerlink" title="双向最大匹配算法"></a>双向最大匹配算法</h2><p>双向最大匹配算法是逆向最大匹配算法与正向最大匹配算法的结合，当正向效果较好时就采用正向效果，当逆向效果较好时便采用逆向效果，通常用分解出来的字符串数目进行效果的检验。</p>
+<p>text = ’Don’t hesitate to ask questions. Be positive‘</p>
+<ol>
+<li><p><strong>安装</strong>：安装使用pip正常安装即可，但是在第一次使用前要利用download命令，并在弹出的下载器中下载相应的文件包，全部下载需要2G左右。下载时要开VPN，否则服务器会没有响应。如果下载还是不成功，可以尝试从github/nltk中下载需要的package并放在默认路径中（APPDATA)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line">nltk.download()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p><strong>测试安装是否成功</strong>：导出包中的预置文本从而判断包有没有下载成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.corpus <span class="keyword">import</span> brown</span><br><span class="line">print(brown.words())</span><br><span class="line">print(len(brown.sents())) <span class="comment"># 句子数</span></span><br><span class="line">print(len(brown.words())) <span class="comment"># 单词数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> nltk.book <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p><strong>文本切分成语句</strong>：对text进行语句划分，输出为sentence的list</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一</span></span><br><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> sent_tokenize</span><br><span class="line">print(sent_tokenize(text))</span><br><span class="line"><span class="comment"># Out: ["Don't hesitate to ask questions.", 'Be positive.']</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line">tokenizer=nltk.data.load(<span class="string">'tokenizers/punkt/english.pickle'</span>) print(tokenizer.tokenize(text))</span><br><span class="line"><span class="comment"># Out: ["Don't hesitate to ask questions.", 'Be positive.']</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p><strong>语句分词</strong>：对sentence进行划分，最终得到words</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一：TreebankWordTokenizer依据Penn Treebank语料库约定，通过分离缩略词来实现划分</span></span><br><span class="line">words=nltk.word_tokenize(text) </span><br><span class="line">print(words)</span><br><span class="line"><span class="comment"># Out: ['Do', "n't", 'hesitate', 'to', 'ask', 'questions', '.', 'Be', 'positive', '.']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#方法二：PunctWordTokenizer通过分离标点实现划分，每一个单词都会被保留</span></span><br><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> WordPunctTokenizer tokenizer=WordPunctTokenizer() words = tokenizer.tokenize(text) print(words</span><br><span class="line"><span class="comment"># Out: ['Don', "'", 't', 'hesitate', 'to', 'ask', 'questions', '.', 'Be', 'positive', '.']</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 其他分词方法</span></span><br><span class="line"><span class="comment"># RegexpTokenizer、WhitespaceTokenizer、BlanklineTokenizer</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="5">
+<li><p><strong>概率分布</strong>：nltk.probability.FreqDist </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fdist = FreqDist(samples)        <span class="comment"># 创建包含给定样本的频率分布，参数为词的列表 </span></span><br><span class="line">fdist.inc(sample)                <span class="comment"># 增加样本 </span></span><br><span class="line">fdist[<span class="string">'monstrous'</span>]               <span class="comment"># 计数给定样本出现的次数 </span></span><br><span class="line">fdist.freq(<span class="string">'monstrous'</span>)          <span class="comment"># 给定样本的频率 </span></span><br><span class="line">fdist.N()                        <span class="comment"># 样本总数 </span></span><br><span class="line">fdist.keys()                     <span class="comment"># 以频率递减顺序排序的样本链表 </span></span><br><span class="line"><span class="keyword">for</span> sample <span class="keyword">in</span> fdist:             <span class="comment"># 以频率递减的顺序遍历样本 </span></span><br><span class="line">fdist.max()                      <span class="comment"># 数值最大的样本 </span></span><br><span class="line">fdist.tabulate()                 <span class="comment"># 绘制频率分布表 </span></span><br><span class="line">fdist.plot()                     <span class="comment"># 绘制频率分布图 </span></span><br><span class="line">fdist.plot(cumulative=<span class="literal">True</span>)      <span class="comment"># 绘制累积频率分布图 </span></span><br><span class="line">fdist1 &lt; fdist2                  <span class="comment"># 测试样本在 fdist1 中出现的频率是否小于 fdist2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="6">
+<li><p><strong>条件概率分布</strong>：nltk.probability.ConditionalFreqDist </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cfdist= ConditionalFreqDist(pairs)      <span class="comment"># 从配对链表中创建条件频率分布 </span></span><br><span class="line">cfdist.conditions()                     <span class="comment"># 将条件按字母排序 </span></span><br><span class="line">cfdist[condition]                       <span class="comment"># 此条件下的频率分布 </span></span><br><span class="line">cfdist[condition][sample]               <span class="comment"># 此条件下给定样本的频率 </span></span><br><span class="line">cfdist.tabulate()                       <span class="comment"># 为条件频率分布制表 </span></span><br><span class="line">cfdist.tabulate(samples, conditions)    <span class="comment"># 指定样本和条件限制下制表 </span></span><br><span class="line">cfdist.plot()                           <span class="comment"># 为条件频率分布绘图 </span></span><br><span class="line">cfdist.plot(samples, conditions)        <span class="comment"># 指定样本和条件限制下绘图 </span></span><br><span class="line">cfdist1 &lt; cfdist2                       <span class="comment"># 测试样本在 cfdist1 中出现次数是否小于在 cfdist2 中出现次数</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="7">
+<li><p><strong>文本整体统计分析</strong>：nltk.text.Text()类用于对文本进行初级的统计与分析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Text(words)                             <span class="comment"># 对象构造,参数为词的列表 </span></span><br><span class="line">concordance(word, width, lines)         <span class="comment"># 显示 word 出现的上下文 </span></span><br><span class="line">common_contexts(words)                  <span class="comment"># 显示words出现的相同模式 </span></span><br><span class="line">similar(word)                           <span class="comment"># 显示 word 的相似词 </span></span><br><span class="line">collocations(num, window_size)          <span class="comment"># 显示最常见的二词搭配 </span></span><br><span class="line">count(word)                             <span class="comment"># word 出现的词数 </span></span><br><span class="line">dispersion_plot(words)                  <span class="comment"># 绘制 words 中文档中出现的位置图 </span></span><br><span class="line">vocab()                                 <span class="comment"># 返回文章去重的词典</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="8">
+<li><p><strong>语料库</strong>：nltk.corpus</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gutenberg   <span class="comment"># 大约有 36000 本免费电子图书，多是古典作品 </span></span><br><span class="line">webtext     <span class="comment"># 网络小说、论坛、网络广告等内容 </span></span><br><span class="line">nps_chat    <span class="comment"># 有上万条聊天消息语料库，即时聊天消息为主 </span></span><br><span class="line">brown       <span class="comment"># 一个百万词级别的英语电子语料库，这个语料库包含 500 个不同来源的文本，按 文体分类有新闻、社论等 </span></span><br><span class="line">reuters     <span class="comment"># 路透社语料库，上万篇新闻方档，约有 1 百万字，分 90 个主题，并分为训练集和 测试集两组 </span></span><br><span class="line">inaugural   <span class="comment"># 演讲语料库，几十个文本，都是总统演说</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="9">
+<li><p><strong>语料库操作</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fileids()                             <span class="comment"># 返回语料库中文件名列表 </span></span><br><span class="line">fileids[categories]                   <span class="comment"># 返回指定类别的文件名列表 </span></span><br><span class="line">raw(fid=[c1,c2])                      <span class="comment"># 返回指定文件名的文本字符串 </span></span><br><span class="line">raw(catergories=[])                   <span class="comment"># 返回指定分类的原始文本 </span></span><br><span class="line">sents(fid=[c1,c2])                    <span class="comment"># 返回指定文件名的语句列表 </span></span><br><span class="line">sents(catergories=[c1,c2])            <span class="comment"># 按分类返回语句列表 </span></span><br><span class="line">words(filename)                       <span class="comment"># 返回指定文件名的单词列表 </span></span><br><span class="line">words(catogories=[])                  <span class="comment"># 返回指定分类的单词列表</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="10">
+<li><p><strong>提取词干</strong>：取出单词中的词缀，得到单词的词根或者词干，搜索引擎大多会使用词干提取来获取词干并将其存储作为索引词</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一：在 NLTK 中使用 PorterStemmer 类进行词干</span></span><br><span class="line"><span class="keyword">import</span> nltk <span class="keyword">from</span> nltk.stem </span><br><span class="line"><span class="keyword">import</span> PorterStemmer </span><br><span class="line">stemmerporter = PorterStemmer() </span><br><span class="line">stemmerporter.stem(<span class="string">'happiness'</span>)</span><br><span class="line"><span class="comment"># Out: 'happi'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二2：LancasterStemmer 类在 NLTK 中用于实现 Lancaster 词干提取算法</span></span><br><span class="line"><span class="keyword">import</span> nltk <span class="keyword">from</span> nltk.stem </span><br><span class="line"><span class="keyword">import</span> LancasterStemmer </span><br><span class="line">stemmerlan=LancasterStemmer() </span><br><span class="line">stemmerlan.stem(<span class="string">'happiness'</span>)</span><br><span class="line">Out: <span class="string">'happy'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三</span></span><br><span class="line"><span class="comment"># 过使用 RegexpStemmer 类构建词干提取器，通过接受一个字符串，并在找到其匹配的单词使删除该单词的前缀和后缀</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="11">
+<li><p><strong>词性标注</strong>：对单词的词性如名词，动词形容词等属性进行标记，nltk.tag包中包含词性标注器，被TaggerIbase继承</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 英文标注通常使用nltk，对中文标注时常使用jieba模块</span></span><br><span class="line"><span class="keyword">import</span> nltk </span><br><span class="line">text1=nltk.word_tokenize(<span class="string">"It is a pleasant day today"</span>) nltk.pos_tag(text1)</span><br><span class="line"><span class="comment"># Out: [('It', 'PRP'), ('is', 'VBZ'), ('a', 'DT'), ('pleasant', 'JJ'), ('day', 'NN'), ('today', 'NN')]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># jieba标注中文文本</span></span><br><span class="line">seg = jieba.posseg.cut(sentence_words)</span><br><span class="line">l = []</span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> seg:</span><br><span class="line">	l.append(j.word)</span><br><span class="line">	l.append(j.flag)</span><br><span class="line">print(l, file=output)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="12">
+<li><p><strong>清除标点符号</strong>：中英文均可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">filter_punctuation</span><span class="params">(words)</span>:</span> </span><br><span class="line">    new_words = []; </span><br><span class="line">    illegal_char = string.punctuation + <span class="string">'【·！…（）—：“”？《》、；】'</span> </span><br><span class="line">    pattern=re.compile(<span class="string">'[%s]'</span> % re.escape(illegal_char)) </span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words: </span><br><span class="line">        new_word = pattern.sub(<span class="string">u''</span>, word) </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> new_word == <span class="string">u''</span>: </span><br><span class="line">            new_words.append(new_word) </span><br><span class="line">    <span class="keyword">return</span> new_words</span><br><span class="line">words_no_punc = filter_punctuation(words) </span><br><span class="line">print(words_no_punc)</span><br><span class="line"><span class="comment"># Out: ['Don', 't', 'hesitate', 'to', 'ask', 'questions', 'Be', 'positive']</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="13">
+<li><p><strong>大小写转换</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(text.lower()) </span><br><span class="line">print(text.upper()) </span><br><span class="line"><span class="comment"># Out: don't hesitate to ask questions. be positive. </span></span><br><span class="line"><span class="comment"># DON'T HESITATE TO ASK QUESTIONS. BE POSITIVE.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="14">
+<li><strong>处理停止词</strong></li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.corpus <span class="keyword">import</span> stopwords </span><br><span class="line">stops=set(stopwords.words(<span class="string">'english'</span>)) </span><br><span class="line">words = [word <span class="keyword">for</span> word <span class="keyword">in</span> words <span class="keyword">if</span> word.lower() <span class="keyword">not</span> <span class="keyword">in</span> stops]</span><br><span class="line">print(words)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -414,7 +476,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -427,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/19/DES/" rel="next" title="Data Encryption Standard">
-                <i class="fa fa-chevron-left"></i> Data Encryption Standard
+              <a href="/2019/03/24/database/" rel="next" title="Database——sql">
+                <i class="fa fa-chevron-left"></i> Database——sql
               </a>
             
           </div>
@@ -436,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/24/database/" rel="prev" title="Database——sql">
-                Database——sql <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,17 +549,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -570,22 +619,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正向最大匹配算法"><span class="nav-number">1.</span> <span class="nav-text">正向最大匹配算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逆向最大匹配算法"><span class="nav-number">2.</span> <span class="nav-text">逆向最大匹配算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双向最大匹配算法"><span class="nav-number">3.</span> <span class="nav-text">双向最大匹配算法</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
