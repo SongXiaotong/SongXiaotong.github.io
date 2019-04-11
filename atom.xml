@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-11T14:57:01.079Z</updated>
+  <updated>2019-04-11T15:10:43.536Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>用例建模-绘制用例图</title>
-    <link href="http://yoursite.com/2019/04/08/%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1-%E7%BB%98%E5%88%B6%E7%94%A8%E4%BE%8B%E5%9B%BE/"/>
-    <id>http://yoursite.com/2019/04/08/用例建模-绘制用例图/</id>
+    <link href="http://yoursite.com/2019/04/08/case/"/>
+    <id>http://yoursite.com/2019/04/08/case/</id>
     <published>2019-04-08T03:00:50.000Z</published>
-    <updated>2019-04-11T14:57:01.079Z</updated>
+    <updated>2019-04-11T15:10:43.536Z</updated>
     
     <summary type="html">
     
@@ -35,9 +35,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -163,9 +163,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -187,9 +187,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -211,9 +211,9 @@
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
     
   </entry>
   
@@ -233,9 +233,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
