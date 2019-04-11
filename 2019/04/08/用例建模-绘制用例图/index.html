@@ -95,7 +95,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/extends.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/gener.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/asso.png">
-<meta property="og:updated_time" content="2019-04-10T14:56:49.615Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/tpp.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/dmw.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/08/用例建模-绘制用例图/用例建模-绘制用例图/xcw.png">
+<meta property="og:updated_time" content="2019-04-11T14:57:01.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用例建模-绘制用例图">
 <meta name="twitter:description" content="对于用例以及用例图的概念给出了定义 针对票务系统的三个软件进行了用例建模 对详细系统用例图进行了分析">
@@ -450,21 +453,116 @@
 </ul>
 <p><strong>（4）确定外部接口</strong>：外部接口可能是一些API的调用，在系统方框外用其他的方框标识调用的外部api，并使用关联关系符号将接口与调用此接口的用例相连</p>
 </li>
-<li><p><strong>用例图给利益相关人员与开发这的价值</strong>、</p>
-<p>（1）用例图</p>
+<li><p><strong>用例图给利益相关人员与开发者的价值</strong></p>
+<p>（1）用例图便于帮助未参与需求设计的开发者更好地理解系统功能，是开发者与产品负责人沟通的桥梁</p>
+<p>（2）用例图可以形象地展示系统边界以及系统功能，对于项目工作量的呈现也是十分形象化的</p>
+<p>（3）用例图可以帮助开发者梳理项目开发流程与技术要点，便于开发者进行研究学习与开发准备</p>
 </li>
 </ol>
 <h2 id="用例建模"><a href="#用例建模" class="headerlink" title="用例建模"></a>用例建模</h2><ol>
-<li>淘票票</li>
-<li>大麦网</li>
-<li>携程网</li>
+<li><p><strong>淘票票</strong></p>
+<p><img src="/2019/04/08/用例建模-绘制用例图/./用例建模-绘制用例图/tpp.png" alt="tpp"></p>
+</li>
+<li><p><strong>大麦网</strong></p>
+<p><img src="/2019/04/08/用例建模-绘制用例图/./用例建模-绘制用例图/dmw.png" alt="dmw"></p>
+</li>
+<li><p><strong>携程网</strong></p>
+<p><img src="/2019/04/08/用例建模-绘制用例图/./用例建模-绘制用例图/xcw.png" alt="xcw"></p>
+</li>
 </ol>
 <h2 id="用例问题"><a href="#用例问题" class="headerlink" title="用例问题"></a>用例问题</h2><ol>
-<li>为什么相似系统的用例图是相似的？</li>
-<li>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用</li>
-<li>使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</li>
-<li>根据任务3，参考使用用例点估算软件成本，给出项目用例点的估算</li>
+<li><p><strong>为什么相似系统的用例图是相似的？</strong></p>
+<p>由于用户对于某一特定目标的的广泛需求是固定的，所以为了满足用户最基本的需要、让系统功能的基础建设较为完善，不同的系统开发团队都会针对这部分最广泛的需求进行功能设计，也就是说这个软件的不同点往往不在用例上，而是在交互设计上，所以，对于展示用例场景的用例图来说，相似系统往往是差不多的。</p>
+</li>
+<li><p><strong>如何利用不同时代、不同地区产品的用例图，展现、突出创新业务和技术</strong></p>
+<p>使用不同颜色进行标识</p>
+</li>
+<li><p><strong>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用</strong></p>
+<p>可以使用较为鲜艳的颜色对需要表示的创新点进行标识</p>
+</li>
+<li><p><strong>使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</strong></p>
+<p>| <strong>ID</strong> | <strong>TITLE</strong>    | <strong>IMP</strong> | <strong>EST</strong> | <strong>ITER</strong> | <strong>HOW TO DEMO</strong>                                              |<br>| —— | ———— | ——- | ——- | ——– | ———————————————————— |<br>| 1      | 查看列表     | 5       | 2       | 1        | 主页查看酒店的简略信息，点击查看酒店详情，包括位置、星级、评价等信息 |<br>| 2      | 排序         | 4       | 3       | 2        | 按照好评、价格、距离等排序                                   |<br>| 3      | 预定酒店     | 5       | 3       | 3        | 用户预定酒店后保存预定信息                                   |<br>| 4      | 个人信息编辑 | 5       | 2       | 2        | 包括身份信息，支付信息以及其他信息                           |<br>| 5      | 支付房费     | 5       | 1       | 2        | 使用支付接口                                                 |<br>| 6      | 搜索酒店     | 5       | 2       | 1        | 通过姓名、评价、位置等关键词完成搜索                         |<br>| 7      | 查看地图     | 3       | 2       | 3        | 在地图上查看酒店位置                                         |<br>| 8      | 学习接口技术 | 3       | 3       | 1        | 学习系统功能api使用方法                                      |<br>| 9      | 订单反馈     | 3       | 3       | 3        | 用户评价订单，评价显示                                       |</p>
+</li>
 </ol>
+<ol start="5">
+<li><strong>根据任务3，参考使用用例点估算软件成本，给出项目用例点的估算</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>用例</th>
+<th>事务</th>
+<th>计算</th>
+<th>原因</th>
+<th>UC权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看列表</td>
+<td>3</td>
+<td>2</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>排序</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>预订酒店</td>
+<td>4</td>
+<td>4</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>个人信息编辑</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>支付房费</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>搜索酒店</td>
+<td>4</td>
+<td>4</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>查看地图</td>
+<td>3</td>
+<td>1</td>
+<td>框架</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>学习接口技术</td>
+<td>4</td>
+<td>4</td>
+<td></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>订单反馈</td>
+<td>6</td>
+<td>6</td>
+<td></td>
+<td>平均</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -691,7 +789,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">~~本站共12.3k字呦~~</span>
+  <span class="post-count">~~本站共12.9k字呦~~</span>
 </div>
 
         
