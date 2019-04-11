@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-25T08:00:07.210Z</updated>
+  <updated>2019-04-10T14:56:49.615Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用例建模-绘制用例图</title>
+    <link href="http://yoursite.com/2019/04/08/%E7%94%A8%E4%BE%8B%E5%BB%BA%E6%A8%A1-%E7%BB%98%E5%88%B6%E7%94%A8%E4%BE%8B%E5%9B%BE/"/>
+    <id>http://yoursite.com/2019/04/08/用例建模-绘制用例图/</id>
+    <published>2019-04-08T03:00:50.000Z</published>
+    <updated>2019-04-10T14:56:49.615Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;对于用例以及用例图的概念给出了定义&lt;/li&gt;
+&lt;li&gt;针对票务系统的三个软件进行了用例建模&lt;/li&gt;
+&lt;li&gt;对详细系统用例图进行了分析&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
+    
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
+    
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+  </entry>
   
   <entry>
     <title>nltk</title>
