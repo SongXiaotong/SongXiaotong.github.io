@@ -293,6 +293,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/make-reservation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/12/make-reservation/" itemprop="url">make_reservation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T17:11:14+08:00">
+                2019-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system-design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Asg-RH"><a href="#Asg-RH" class="headerlink" title="Asg-RH"></a>Asg-RH</h3><h4 id="Asg用例图"><a href="#Asg用例图" class="headerlink" title="Asg用例图"></a>Asg用例图</h4><p>用户交互主要包括搜索旅馆、预定旅馆、购物车操作以及支付，对于这四种交互分别进行用例的完善和关联关系的设计：</p>
+<ol>
+<li>搜索旅馆：搜索时需要输入城市、入住日期、离店日期三种必要信息，所以将这三种情况使用include关系与搜索用例关联，同时搜索结果支持排序，以及如果没有搜索结果则查看推荐，于是这两种用例使用extend关系关联：其中，排序功能支持不同的四种元素筛选，所以使用泛化关系丰富排序用例</li>
+<li>预定旅馆：预定时必须的流程有搜索、选择旅店、选择房型以及确定预定，其中，选择旅店时需要支持查看详情，确认预定时需要完善全名和地址两种客户信息</li>
+<li>购物车操作：购物车支持添加、移出、检查三种操作，其中，用户添加购物车时，首先需要完善个人信息</li>
+<li>支付：支付过程中，用户必须进行的操作有选择支付账户，填写必要信息，其中，选择支付账户可以调用外部接口</li>
+</ol>
+<p><img src="/2019/04/12/make-reservation/asg.png" alt="asg"></p>
+<h4 id="Make-reservation-活动图"><a href="#Make-reservation-活动图" class="headerlink" title="Make reservation 活动图"></a>Make reservation 活动图</h4><p><img src="/2019/04/12/make-reservation/activity.png" alt="asg"></p>
+<h3 id="快递系统"><a href="#快递系统" class="headerlink" title="快递系统"></a>快递系统</h3><h4 id="泳道图"><a href="#泳道图" class="headerlink" title="泳道图"></a>泳道图</h4><h5 id="业务1"><a href="#业务1" class="headerlink" title="业务1"></a>业务1</h5><p>整体流程：快递员登录-&gt;存放快递-&gt;短信平台发送短信-&gt;收件人凭短信信息取件</p>
+<p><img src="/2019/04/12/make-reservation/2-1.png" alt="V1.0"></p>
+<h5 id="业务2"><a href="#业务2" class="headerlink" title="业务2"></a>业务2</h5><p>整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;快递公司发送短信-&gt;收件人凭短信信息取件</p>
+<p><img src="/2019/04/12/make-reservation/2-2.png" alt="V2.0"></p>
+<h5 id="业务3"><a href="#业务3" class="headerlink" title="业务3"></a>业务3</h5><p>整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;判断用户是否关注公众号-&gt;(快递公司/公众号)发送短信-&gt;收件人凭短信信息取件</p>
+<p><img src="/2019/04/12/make-reservation/2-3.png" alt="V3.0"></p>
+<h4 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h4><p> <img src="/2019/04/12/make-reservation/2-4.png" alt="usecase"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/usecase/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1603,152 +1760,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/hw1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Song Xiaotong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Trevi Fountain">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/27/hw1/" itemprop="url">软件的本质与软件工程科学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-27T13:32:35+08:00">
-                2019-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system-design</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h3><p>a) 软件工程是指将系统化、规范化、可度量的方法应用于软件的开发、运行和维护中，即，将工程化的方法应用于软件。<br>b) 同时，针对上述行为的相关方法的研究也是软件工程。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/27/hw1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1801,7 +1812,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1892,7 +1903,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">~~本站共12.9k字呦~~</span>
+  <span class="post-count">~~本站共13.4k字呦~~</span>
 </div>
 
         
