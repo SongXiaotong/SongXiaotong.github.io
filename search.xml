@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C++_Containers]]></title>
+    <url>%2F2019%2F04%2F17%2FC-Containers%2F</url>
+    <content type="text"><![CDATA[C++容器是一种可以保存其他数据类型指针的对象类型，其空间可扩展性也使得其相对于数据来说具有很大的优势。 本文对C++容器的使用进行了总结说明 Reference：C++ array简介std::array是一种定长的序列容器，其中元素遵循严格的线性排序。与其他容器不同，array是固定大小的封装类型，所以不能进行扩展或者缩小，同时，交换两个array的行为是一种线性的操作，相对来说是十分低效的。 所以array具有如下三个特点：序列化（内部元素严格线性存储，需要按照位置访问）、连续存储（array的内存空间是连续分配的，可以使用指针偏移访问相应的元素）、大小固定（array使用隐式构造函数与析构函数进行控件的静态分配，其大小是编译时确定的常量，没有内存和时间上的开销） 声明方法12std::array&lt;int, size&gt; arrayname；std::array&lt;int,5&gt; first = &#123;10, 20, 30, 40, 50&#125;; 遍历方法1for ( value_type&amp; x : myarray) 成员函数 table th:nth-of-type(5){ width: 36%; }, table th:nth-of-type(3){ width: 32%; } table th:nth-of-type(1){ width: 9%; } table th:nth-of-type(2){ width: 15%; } table th:nth-of-type(4){ width: 8%; } 功能 方法 用法 类型 备注 iterator begin 获取顺序iterator第一个元素 public end 获取顺序iterator最后一个元素 public rbegin 获取倒序iterator第一个元素 public rend 获取倒序iterator最后一个元素 public cbegin 同begin public const类型，可以访问不可修改 cend 同end public const类型，可以访问不可修改 crbegin 同rbegin public const类型，可以访问不可修改 crend 同rend public const类型，可以访问不可修改 capacity size 返回容量 public sizeof为容量*类型长度 max_size 和size一样 public empty 容量是否为0 bool element access operator[] 返回指定位置的元素 public （1）可以直接访问，也可以对返回的元素进行修改（2）超出返回out-of -range异常 at (pos ) 返回指定位置的元素 public （1）可以直接访问，也可以对返回的元素进行修改（2）超出返回out-of -range异常 front ( ) 返回第一个元素 public （1）与begin不同，返回直接引用；（2）如果对空容器使用该方法，会产生undefined异常（3）可以对返回的对象进行修改 back ( ) 返回最后一个元素 public （1）与end不同，返回直接引用；（2）如果对空容器使用该方法，会产生undefined异常（3）可以对返回的对象进行修改 data() 返回对象头部指针 public modifiers fill（value_type&amp; val） array中全部元素设为val public fill_n (OutputIterator first, Size n, const T&amp; val) array1.swap(array2) 交换两个array public （1）两个array大小和类型相同(2)swap是一种线性的操作 non-member function overloads get(array) 访问pos位置的值 public （1）是对元组get方法的重载（2）不会抛出异常 relational operators(array) 比较操作 bool （1）比相等时，要内容和容量完全相同（2）比大小时，元素内容依次比较，如果出现不同直接返回大小（类似字典序） non-menber class tuple_element public 静态元组形式访问元素 tuple_size public 静态元组形式访问大小 &lt;–持续更新中–&gt;]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Data-structure</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[make_reservation]]></title>
     <url>%2F2019%2F04%2F12%2Fmake-reservation%2F</url>
     <content type="text"><![CDATA[设计Asg-RH旅馆预定系统用例图设计预定酒店活动图设计快递柜系统业务场景泳道图设计快递柜系统用例图 Asg-RHAsg用例图用户交互主要包括搜索旅馆、预定旅馆、购物车操作以及支付，对于这四种交互分别进行用例的完善和关联关系的设计： 搜索旅馆：搜索时需要输入城市、入住日期、离店日期三种必要信息，所以将这三种情况使用include关系与搜索用例关联，同时搜索结果支持排序，以及如果没有搜索结果则查看推荐，于是这两种用例使用extend关系关联：其中，排序功能支持不同的四种元素筛选，所以使用泛化关系丰富排序用例 预定旅馆：预定时必须的流程有搜索、选择旅店、选择房型以及确定预定，其中，选择旅店时需要支持查看详情，确认预定时需要完善全名和地址两种客户信息 购物车操作：购物车支持添加、移出、检查三种操作，其中，用户添加购物车时，首先需要完善个人信息 支付：支付过程中，用户必须进行的操作有选择支付账户，填写必要信息，其中，选择支付账户可以调用外部接口 Make reservation 活动图 快递系统泳道图业务1整体流程：快递员登录-&gt;存放快递-&gt;短信平台发送短信-&gt;收件人凭短信信息取件 业务2整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;快递公司发送短信-&gt;收件人凭短信信息取件 业务3整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;判断用户是否关注公众号-&gt;(快递公司/公众号)发送短信-&gt;收件人凭短信信息取件 用例图]]></content>

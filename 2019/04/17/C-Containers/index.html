@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="homework,">
+  <meta name="keywords" content="C++,Data-structure,">
 
 
 
@@ -81,25 +81,18 @@
 
 
 
-<meta name="description" content="设计Asg-RH旅馆预定系统用例图设计预定酒店活动图设计快递柜系统业务场景泳道图设计快递柜系统用例图">
-<meta name="keywords" content="homework">
+<meta name="description" content="C++容器是一种可以保存其他数据类型指针的对象类型，其空间可扩展性也使得其相对于数据来说具有很大的优势。 本文对C++容器的使用进行了总结说明 Reference：C++">
+<meta name="keywords" content="C++,Data-structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="make_reservation">
-<meta property="og:url" content="http://yoursite.com/2019/04/12/make-reservation/index.html">
+<meta property="og:title" content="C++_Containers">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/C-Containers/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
-<meta property="og:description" content="设计Asg-RH旅馆预定系统用例图设计预定酒店活动图设计快递柜系统业务场景泳道图设计快递柜系统用例图">
+<meta property="og:description" content="C++容器是一种可以保存其他数据类型指针的对象类型，其空间可扩展性也使得其相对于数据来说具有很大的优势。 本文对C++容器的使用进行了总结说明 Reference：C++">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/asg.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/activity.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/2-1.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/2-2.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/2-3.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/make-reservation/2-4.png">
-<meta property="og:updated_time" content="2019-04-13T06:39:38.533Z">
+<meta property="og:updated_time" content="2019-04-26T16:16:48.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="make_reservation">
-<meta name="twitter:description" content="设计Asg-RH旅馆预定系统用例图设计预定酒店活动图设计快递柜系统业务场景泳道图设计快递柜系统用例图">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/12/make-reservation/asg.png">
+<meta name="twitter:title" content="C++_Containers">
+<meta name="twitter:description" content="C++容器是一种可以保存其他数据类型指针的对象类型，其空间可扩展性也使得其相对于数据来说具有很大的优势。 本文对C++容器的使用进行了总结说明 Reference：C++">
 
 
 
@@ -129,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/12/make-reservation/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/17/C-Containers/">
 
 
 
 
 
-  <title>make_reservation | Trevi Fountain</title>
+  <title>C++_Containers | Trevi Fountain</title>
   
 
 
@@ -304,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/make-reservation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/C-Containers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Xiaotong">
@@ -321,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">make_reservation</h1>
+          <h1 class="post-title" itemprop="name headline">C++_Containers</h1>
         
 
         <div class="post-meta">
@@ -333,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T17:11:14+08:00">
-                2019-04-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-17T10:44:58+08:00">
+                2019-04-17
               </time>
             
 
@@ -356,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system-design</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -393,23 +386,202 @@
       
 
       
-        <p>设计Asg-RH旅馆预定系统用例图<br>设计预定酒店活动图<br>设计快递柜系统业务场景泳道图<br>设计快递柜系统用例图<br><a id="more"></a></p>
-<h3 id="Asg-RH"><a href="#Asg-RH" class="headerlink" title="Asg-RH"></a>Asg-RH</h3><h4 id="Asg用例图"><a href="#Asg用例图" class="headerlink" title="Asg用例图"></a>Asg用例图</h4><p>用户交互主要包括搜索旅馆、预定旅馆、购物车操作以及支付，对于这四种交互分别进行用例的完善和关联关系的设计：</p>
-<ol>
-<li>搜索旅馆：搜索时需要输入城市、入住日期、离店日期三种必要信息，所以将这三种情况使用include关系与搜索用例关联，同时搜索结果支持排序，以及如果没有搜索结果则查看推荐，于是这两种用例使用extend关系关联：其中，排序功能支持不同的四种元素筛选，所以使用泛化关系丰富排序用例</li>
-<li>预定旅馆：预定时必须的流程有搜索、选择旅店、选择房型以及确定预定，其中，选择旅店时需要支持查看详情，确认预定时需要完善全名和地址两种客户信息</li>
-<li>购物车操作：购物车支持添加、移出、检查三种操作，其中，用户添加购物车时，首先需要完善个人信息</li>
-<li>支付：支付过程中，用户必须进行的操作有选择支付账户，填写必要信息，其中，选择支付账户可以调用外部接口</li>
-</ol>
-<p><img src="/2019/04/12/make-reservation/asg.png" alt="asg"></p>
-<h4 id="Make-reservation-活动图"><a href="#Make-reservation-活动图" class="headerlink" title="Make reservation 活动图"></a>Make reservation 活动图</h4><p><img src="/2019/04/12/make-reservation/activity.png" alt="asg"></p>
-<h3 id="快递系统"><a href="#快递系统" class="headerlink" title="快递系统"></a>快递系统</h3><h4 id="泳道图"><a href="#泳道图" class="headerlink" title="泳道图"></a>泳道图</h4><h5 id="业务1"><a href="#业务1" class="headerlink" title="业务1"></a>业务1</h5><p>整体流程：快递员登录-&gt;存放快递-&gt;短信平台发送短信-&gt;收件人凭短信信息取件</p>
-<p><img src="/2019/04/12/make-reservation/2-1.png" alt="V1.0"></p>
-<h5 id="业务2"><a href="#业务2" class="headerlink" title="业务2"></a>业务2</h5><p>整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;快递公司发送短信-&gt;收件人凭短信信息取件</p>
-<p><img src="/2019/04/12/make-reservation/2-2.png" alt="V2.0"></p>
-<h5 id="业务3"><a href="#业务3" class="headerlink" title="业务3"></a>业务3</h5><p>整体流程：快递员扫描二维码登录-&gt;公司认证身份-&gt;快递员扫描单号-&gt;存放快递-&gt;判断用户是否关注公众号-&gt;(快递公司/公众号)发送短信-&gt;收件人凭短信信息取件</p>
-<p><img src="/2019/04/12/make-reservation/2-3.png" alt="V3.0"></p>
-<h4 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h4><p> <img src="/2019/04/12/make-reservation/2-4.png" alt="usecase"></p>
+        <p>C++容器是一种可以保存其他数据类型指针的对象类型，其空间可扩展性也使得其相对于数据来说具有很大的优势。</p>
+<p>本文对C++容器的使用进行了总结说明</p>
+<p>Reference：<a href="http://www.cplusplus.com" target="_blank" rel="noopener">C++</a></p>
+<a id="more"></a>
+<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>std::array是一种定长的序列容器，其中元素遵循严格的线性排序。与其他容器不同，array是固定大小的封装类型，所以不能进行扩展或者缩小，同时，交换两个array的行为是一种线性的操作，相对来说是十分低效的。</p>
+<p>所以array具有如下三个特点：序列化（内部元素严格线性存储，需要按照位置访问）、连续存储（array的内存空间是连续分配的，可以使用指针偏移访问相应的元素）、大小固定（array使用隐式构造函数与析构函数进行控件的静态分配，其大小是编译时确定的常量，没有内存和时间上的开销）</p>
+<h3 id="声明方法"><a href="#声明方法" class="headerlink" title="声明方法"></a>声明方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::array&lt;int, size&gt; arrayname；</span><br><span class="line">std::array&lt;int,5&gt; first = &#123;10, 20, 30, 40, 50&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for ( value_type&amp; x : myarray)</span><br></pre></td></tr></table></figure>
+<h3 id="成员函数"><a href="#成员函数" class="headerlink" title="成员函数"></a>成员函数</h3><style>
+table th:nth-of-type(5){
+width: 36%;
+},
+table th:nth-of-type(3){
+width: 32%;
+} 
+table th:nth-of-type(1){
+width: 9%;
+} 
+table th:nth-of-type(2){
+width: 15%;
+}
+table th:nth-of-type(4){
+width: 8%;
+} 
+</style>
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">用法</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">iterator</td>
+<td style="text-align:center">begin</td>
+<td style="text-align:center">获取顺序iterator第一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">end</td>
+<td style="text-align:center">获取顺序iterator最后一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">rbegin</td>
+<td style="text-align:center">获取倒序iterator第一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">rend</td>
+<td style="text-align:center">获取倒序iterator最后一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">cbegin</td>
+<td style="text-align:center">同begin</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">const类型，可以访问不可修改</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">cend</td>
+<td style="text-align:center">同end</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">const类型，可以访问不可修改</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">crbegin</td>
+<td style="text-align:center">同rbegin</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">const类型，可以访问不可修改</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">crend</td>
+<td style="text-align:center">同rend</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">const类型，可以访问不可修改</td>
+</tr>
+<tr>
+<td style="text-align:center">capacity</td>
+<td style="text-align:center">size</td>
+<td style="text-align:center">返回容量</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">sizeof为容量*类型长度</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">max_size</td>
+<td style="text-align:center">和size一样</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">empty</td>
+<td style="text-align:center">容量是否为0</td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">element access</td>
+<td style="text-align:center">operator[]</td>
+<td style="text-align:center">返回指定位置的元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）可以直接访问，也可以对返回的元素进行修改<br>（2）超出返回out-of -range异常</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">at (pos )</td>
+<td style="text-align:center">返回指定位置的元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）可以直接访问，也可以对返回的元素进行修改<br>（2）超出返回out-of -range异常</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">front ( )</td>
+<td style="text-align:center">返回第一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）与begin不同，返回直接引用；<br>（2）如果对空容器使用该方法，会产生undefined异常<br>（3）可以对返回的对象进行修改</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">back ( )</td>
+<td style="text-align:center">返回最后一个元素</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）与end不同，返回直接引用；<br>（2）如果对空容器使用该方法，会产生undefined异常<br>（3）可以对返回的对象进行修改</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">data()</td>
+<td style="text-align:center">返回对象头部指针</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">modifiers</td>
+<td style="text-align:center">fill（value_type&amp; val）</td>
+<td style="text-align:center">array中全部元素设为val</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">fill_n (OutputIterator first, Size n, const T&amp; val)</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">array1.swap(array2)</td>
+<td style="text-align:center">交换两个array</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）两个array大小和类型相同<br>(2)swap是一种线性的操作</td>
+</tr>
+<tr>
+<td style="text-align:center">non-member function overloads</td>
+<td style="text-align:center">get<pos>(array)</pos></td>
+<td style="text-align:center">访问pos位置的值</td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">（1）是对元组get方法的重载<br>（2）不会抛出异常</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">relational  operators(array)</td>
+<td style="text-align:center">比较操作</td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">（1）比相等时，要内容和容量完全相同<br>（2）比大小时，元素内容依次比较，如果出现不同直接返回大小（类似字典序）</td>
+</tr>
+<tr>
+<td style="text-align:center">non-menber class</td>
+<td style="text-align:center">tuple_element<array></array></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">静态元组形式访问元素</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">tuple_size<array></array></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">public</td>
+<td style="text-align:center">静态元组形式访问大小</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;–持续更新中–&gt;</p>
 
       
     </div>
@@ -427,7 +599,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/homework/" rel="tag"># homework</a>
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/Data-structure/" rel="tag"># Data-structure</a>
           
         </div>
       
@@ -440,8 +614,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/08/usecase/" rel="next" title="用例建模-绘制用例图">
-                <i class="fa fa-chevron-left"></i> 用例建模-绘制用例图
+              <a href="/2019/04/12/make-reservation/" rel="next" title="make_reservation">
+                <i class="fa fa-chevron-left"></i> make_reservation
               </a>
             
           </div>
@@ -449,10 +623,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/17/C-Containers/" rel="prev" title="C++_Containers">
-                C++_Containers <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Asg-RH"><span class="nav-number">1.</span> <span class="nav-text">Asg-RH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Asg用例图"><span class="nav-number">1.1.</span> <span class="nav-text">Asg用例图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Make-reservation-活动图"><span class="nav-number">1.2.</span> <span class="nav-text">Make reservation 活动图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快递系统"><span class="nav-number">2.</span> <span class="nav-text">快递系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泳道图"><span class="nav-number">2.1.</span> <span class="nav-text">泳道图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#业务1"><span class="nav-number">2.1.1.</span> <span class="nav-text">业务1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#业务2"><span class="nav-number">2.1.2.</span> <span class="nav-text">业务2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#业务3"><span class="nav-number">2.1.3.</span> <span class="nav-text">业务3</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用例图"><span class="nav-number">2.2.</span> <span class="nav-text">用例图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#array"><span class="nav-number">1.</span> <span class="nav-text">array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明方法"><span class="nav-number">1.2.</span> <span class="nav-text">声明方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历方法"><span class="nav-number">1.3.</span> <span class="nav-text">遍历方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员函数"><span class="nav-number">1.4.</span> <span class="nav-text">成员函数</span></a></li></ol></li></ol></div>
             
 
           </div>
