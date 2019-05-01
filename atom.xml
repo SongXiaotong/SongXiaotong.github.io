@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-26T16:16:48.419Z</updated>
+  <updated>2019-05-01T10:10:07.409Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UMLet建模</title>
+    <link href="http://yoursite.com/2019/04/29/UMLet%E5%BB%BA%E6%A8%A1/"/>
+    <id>http://yoursite.com/2019/04/29/UMLet建模/</id>
+    <published>2019-04-29T13:57:41.000Z</published>
+    <updated>2019-05-01T10:10:07.409Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-领域建模&quot;&gt;&lt;a href=&quot;#1-领域建模&quot; class=&quot;headerlink&quot; title=&quot;1. 领域建模&quot;&gt;&lt;/a&gt;1. 领域建模&lt;/h2&gt;&lt;h3 id=&quot;1-1-Make-Reservation&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
+    
+    
+      <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+  </entry>
   
   <entry>
     <title>C++_Containers</title>
@@ -79,9 +105,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -207,9 +233,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -231,9 +257,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
@@ -277,9 +303,9 @@
       <category term="system-design" scheme="http://yoursite.com/categories/system-design/"/>
     
     
-      <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
+    
+      <category term="points" scheme="http://yoursite.com/tags/points/"/>
     
   </entry>
   
