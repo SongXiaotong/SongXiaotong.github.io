@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-13T16:51:47.196Z</updated>
+  <updated>2019-05-13T17:10:53.030Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>leetcode4</title>
-    <link href="http://yoursite.com/2019/05/14/leetcode4/"/>
-    <id>http://yoursite.com/2019/05/14/leetcode4/</id>
-    <published>2019-05-13T16:51:47.000Z</published>
-    <updated>2019-05-13T16:51:47.196Z</updated>
+    <title>leetcode 4 -- Median of Two Sorted Arrays</title>
+    <link href="http://yoursite.com/2019/05/14/leetcode4-1/"/>
+    <id>http://yoursite.com/2019/05/14/leetcode4-1/</id>
+    <published>2019-05-13T17:06:38.000Z</published>
+    <updated>2019-05-13T17:10:53.030Z</updated>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;题目重述&quot;&gt;&lt;a href=&quot;#题目重述&quot; class=&quot;headerlink&quot; title=&quot;题目重述&quot;&gt;&lt;/a&gt;题目重述&lt;/h2&gt;&lt;p&gt;There are two sorted arrays &lt;strong&gt;nums1&lt;/strong&gt; and &lt;strong&gt;nums2&lt;/strong&gt; of size m and n respectively.&lt;br&gt;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;br&gt;You may assume &lt;strong&gt;nums1&lt;/strong&gt; and &lt;strong&gt;nums2&lt;/strong&gt; cannot be both empty.&lt;/p&gt;
+    
     </summary>
     
+      <category term="Leetcode" scheme="http://yoursite.com/categories/Leetcode/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
@@ -289,9 +295,9 @@
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
