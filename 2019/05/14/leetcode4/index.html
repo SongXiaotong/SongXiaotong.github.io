@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="homework,points,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,28 +81,14 @@
 
 
 
-<meta name="description" content="对于用例以及用例图的概念给出了定义 针对票务系统的三个软件进行了用例建模 对详细系统用例图进行了分析">
-<meta name="keywords" content="homework,points">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用例建模-绘制用例图">
-<meta property="og:url" content="http://yoursite.com/2019/04/08/usecase/index.html">
+<meta property="og:title" content="leetcode4">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/leetcode4/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
-<meta property="og:description" content="对于用例以及用例图的概念给出了定义 针对票务系统的三个软件进行了用例建模 对详细系统用例图进行了分析">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/actor.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/case.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/include.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/extends.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/gener.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/asso.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/tpp.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/dmw.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/usecase/xcw.png">
-<meta property="og:updated_time" content="2019-04-17T03:35:44.173Z">
+<meta property="og:updated_time" content="2019-05-13T16:51:47.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用例建模-绘制用例图">
-<meta name="twitter:description" content="对于用例以及用例图的概念给出了定义 针对票务系统的三个软件进行了用例建模 对详细系统用例图进行了分析">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/08/usecase/actor.png">
+<meta name="twitter:title" content="leetcode4">
 
 
 
@@ -132,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/08/usecase/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/14/leetcode4/">
 
 
 
 
 
-  <title>用例建模-绘制用例图 | Trevi Fountain</title>
+  <title>leetcode4 | Trevi Fountain</title>
   
 
 
@@ -307,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/usecase/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/leetcode4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Xiaotong">
@@ -324,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用例建模-绘制用例图</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode4</h1>
         
 
         <div class="post-meta">
@@ -336,8 +322,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T11:00:50+08:00">
-                2019-04-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-14T00:51:47+08:00">
+                2019-05-14
               </time>
             
 
@@ -346,28 +332,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system-design</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -396,267 +360,7 @@
       
 
       
-        <ol>
-<li>对于用例以及用例图的概念给出了定义</li>
-<li>针对票务系统的三个软件进行了用例建模</li>
-<li>对详细系统用例图进行了分析<a id="more"></a>
-</li>
-</ol>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
-<li><p><strong>用例</strong></p>
-<p>用例是系统针对请求进行响应的行为的描述，可以说，用例是基于某种或者多种场景下的系统与用户的交互行为，简单来说，可以理解为用例就是某用户使用系统时能够进行的某操作的描述。</p>
-<p>在软件工程中，用例表示一种通过用户的使用场景来获取需求的技术，一般由软件开发者和用户共同编写。</p>
-</li>
-<li><p><strong>用例和场景的关系？什么是主场景或happy path？</strong></p>
-<p>（1）场景：是客户与系统之间的交互行为。场景是用例的实例，一用例是场景的集合</p>
-<p>（2） 主场景：是场景中最主要的交互，一般是经常出现的，用户最常用的场景流程。</p>
-<p>（3）happy path：在软件或信息建模的环境中，happy path是一种默认没有异常情况而能流畅完成业务的操作路径</p>
-</li>
-<li><p><strong>用例的形式</strong></p>
-<p>（1）Brief（high level）：通常是主场景的总结，在早期分析需求的过程中，breif形式可以帮助开发者和客户快速了解软件系统的主题和应用范围等信息，可以快速创建</p>
-<p>（2） Casual（简便格式）：非正式的段落格式；覆盖多个场景的几个段落，与breif近似，在早期需求分析过程中，有助于快速了解主题和范围</p>
-<p>（3） Fully：用例中所有的步骤和变化都写得很详细，包括前置条件等应用环境。所有的用户样例都已经定制出初步版本后，优先级更高的用例会被详细编写。</p>
-</li>
-<li><p><strong>对于复杂业务，为什么编制完整用例非常难</strong></p>
-<p>对于复杂业务来说，用例的应用场景十分复杂，需要考虑的因素也有很多。而对于前期的需求分析过程，想要在用力建模额过程中就分析出所有的应用场景是理想的情况，实际建模的过程中，一些被遗漏的场景通常会在后期实现的过程中被发现，这时才能继而编写完整的用例。</p>
-<p>同时，对于用例建模的过程，如果一开始就建立出较为复杂度较高的用例，可读性也并不是很强。</p>
-</li>
-<li><p><strong>什么是用例图</strong></p>
-<p>用例图是一种以绘图的方式展现用例场景的表示方法。用例图以用户和用户行为为主，可以体现出用户与系统的交互场景，并使用图形化的方式，形象地展示出系统的边界和使用方法，对于开发者和使用者来说，都可以通过用例图了解系统与用户间可能的交互行为</p>
-</li>
-<li><p><strong>用例图的基本符号与元素</strong></p>
-<p>（1） 参与者（actors）：表示系统中的用户，即与系统交互的对象</p>
-<p><img src="/2019/04/08/usecase/actor.png" alt="actor"></p>
-<p>（2）用例（use case）：用户与系统的交互行为，可以理解为用户可以使用系统做的事情</p>
-<p><img src="/2019/04/08/usecase/case.png" alt="case"></p>
-<p>（3）包含关系（include）：被指向的用例为发起用例的行为之一</p>
-<p><img src="/2019/04/08/usecase/include.png" alt="include"></p>
-<p>（4）扩展关系（extend）：被指向的用例为发起用例的扩展功能</p>
-<p><img src="/2019/04/08/usecase/extends.png" alt="extend"></p>
-<p>（5）泛化关系（generalization）：被指向的用例是发起用例的特例之一</p>
-<p><img src="/2019/04/08/usecase/gener.png" alt="gener"></p>
-<p>（6）关联关系（association）：表示参与者与用例之间的关系</p>
-<p><img src="/2019/04/08/usecase/asso.png" alt="association"></p>
-</li>
-<li><p><strong>用例图的画法与步骤</strong></p>
-<p><strong>（1）确定系统边界</strong></p>
-<p>先使用方框画出系统边界并标记系统名称</p>
-<p><strong>（2）确定参与者</strong></p>
-<ul>
-<li>明确参与者是谁：用户？管理员？设备？只要是使用系统产生交互的对象都是参与者</li>
-<li>在系统边界外部使用参与者符号，添加参与者信息</li>
-</ul>
-<p><strong>（3）确定用例</strong></p>
-<ul>
-<li>明确系统中的用例场景都有什么：确定系统功能，确定用例之后，在系统方框内添加用例符号并标识用例信息</li>
-<li>明确参与者与用例之间的交互关系：确定参与者与用例之间的关系之后就可以使用关联关系的符号将两者相连</li>
-<li>明确用例之间的关系：明确将用例之间的关系，分别为泛化关系、包含关系、扩展关系，分别用这三种关系的符号连接相应的用例</li>
-</ul>
-<p><strong>（4）确定外部接口</strong></p>
-<p>外部接口可能是一些API的调用，在系统方框外用其他的方框标识调用的外部api，并使用关联关系符号将接口与调用此接口的用例相连</p>
-</li>
-<li><p><strong>用例图给利益相关人员与开发者的价值</strong></p>
-<p>（1）用例图便于帮助未参与需求设计的开发者更好地理解系统功能，是开发者与产品负责人沟通的桥梁</p>
-<p>（2）用例图可以形象地展示系统边界以及系统功能，对于项目工作量的呈现也是十分形象化的</p>
-<p>（3）用例图可以帮助开发者梳理项目开发流程与技术要点，便于开发者进行研究学习与开发准备</p>
-</li>
-</ol>
-<h2 id="用例建模"><a href="#用例建模" class="headerlink" title="用例建模"></a>用例建模</h2><ol>
-<li><p><strong>淘票票</strong></p>
-<p><img src="/2019/04/08/usecase/tpp.png" alt="tpp"></p>
-</li>
-<li><p><strong>大麦网</strong></p>
-<p><img src="/2019/04/08/usecase/dmw.png" alt="dmw"></p>
-</li>
-<li><p><strong>携程网</strong></p>
-<p><img src="/2019/04/08/usecase/xcw.png" alt="xcw"></p>
-</li>
-</ol>
-<h2 id="用例问题"><a href="#用例问题" class="headerlink" title="用例问题"></a>用例问题</h2><ol>
-<li><p><strong>为什么相似系统的用例图是相似的？</strong></p>
-<p>由于用户对于某一特定目标的的广泛需求是固定的，所以为了满足用户最基本的需要、让系统功能的基础建设较为完善，不同的系统开发团队都会针对这部分最广泛的需求进行功能设计，也就是说这个软件的不同点往往不在用例上，而是在交互设计上，所以，对于展示用例场景的用例图来说，相似系统往往是差不多的。</p>
-</li>
-<li><p><strong>如何利用不同时代、不同地区产品的用例图，展现、突出创新业务和技术</strong></p>
-<p>使用不同颜色进行标识</p>
-</li>
-<li><p><strong>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用</strong></p>
-<p>可以使用较为鲜艳的颜色对需要表示的创新点进行标识</p>
-</li>
-<li><p><strong>使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</strong></p>
-</li>
-</ol>
-<style>
-table th:nth-of-type(6){
-width: 50%;
-}
-</style>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:center">ID</th>
-<th style="text-align:center">TITLE</th>
-<th style="text-align:center">IMP</th>
-<th style="text-align:center">EST</th>
-<th style="text-align:center">ITER</th>
-<th style="text-align:center">HOW TO DEMO</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">查看列表</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">主页查看酒店的简略信息，点击查看酒店详情，包括位置、星级、评价等信息</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">排序</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">按照好评、价格、距离等排序</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">预定酒店</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">用户预定酒店后保存预定信息</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">个人信息编辑</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">包括身份信息，支付信息以及其他信息</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">支付房费</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">使用支付接口</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">搜索酒店</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">通过姓名、评价、位置等关键词完成搜索</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td style="text-align:center">查看地图</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">在地图上查看酒店位置</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td style="text-align:center">学习接口技术</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">学习系统功能api使用方法</td>
-</tr>
-<tr>
-<td style="text-align:center">9</td>
-<td style="text-align:center">订单反馈</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">用户评价订单，评价显示</td>
-</tr>
-</tbody>
-</table>
-<ol start="5">
-<li><strong>根据任务3，参考使用用例点估算软件成本，给出项目用例点的估算</strong></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>用例</th>
-<th>事务</th>
-<th>计算</th>
-<th>原因</th>
-<th>UC权重</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>查看列表</td>
-<td>3</td>
-<td>2</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>排序</td>
-<td>3</td>
-<td>3</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>预订酒店</td>
-<td>4</td>
-<td>4</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>个人信息编辑</td>
-<td>3</td>
-<td>3</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>支付房费</td>
-<td>2</td>
-<td>1</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>搜索酒店</td>
-<td>4</td>
-<td>4</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>查看地图</td>
-<td>3</td>
-<td>1</td>
-<td>框架</td>
-<td>简单</td>
-</tr>
-<tr>
-<td>学习接口技术</td>
-<td>4</td>
-<td>4</td>
-<td></td>
-<td>简单</td>
-</tr>
-<tr>
-<td>订单反馈</td>
-<td>6</td>
-<td>6</td>
-<td></td>
-<td>平均</td>
-</tr>
-</tbody>
-</table>
-
+        
       
     </div>
     
@@ -671,14 +375,6 @@ width: 50%;
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/homework/" rel="tag"># homework</a>
-          
-            <a href="/tags/points/" rel="tag"># points</a>
-          
-        </div>
-      
 
       
       
@@ -688,8 +384,8 @@ width: 50%;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/25/nltk/" rel="next" title="nltk">
-                <i class="fa fa-chevron-left"></i> nltk
+              <a href="/2019/04/29/UMLet建模/" rel="next" title="UMLet建模">
+                <i class="fa fa-chevron-left"></i> UMLet建模
               </a>
             
           </div>
@@ -697,10 +393,6 @@ width: 50%;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/12/make-reservation/" rel="prev" title="make_reservation">
-                make_reservation <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -752,17 +444,8 @@ width: 50%;
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -831,22 +514,6 @@ width: 50%;
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用例建模"><span class="nav-number">2.</span> <span class="nav-text">用例建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用例问题"><span class="nav-number">3.</span> <span class="nav-text">用例问题</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
