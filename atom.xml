@@ -30,9 +30,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
-    
       <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
+    
+      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
     
   </entry>
   
@@ -242,9 +242,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
     
   </entry>
   
