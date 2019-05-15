@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-13T17:10:53.030Z</updated>
+  <updated>2019-05-15T11:44:12.754Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>形式语言与自动机</title>
+    <link href="http://yoursite.com/2019/05/15/NLP5/"/>
+    <id>http://yoursite.com/2019/05/15/NLP5/</id>
+    <published>2019-05-15T11:28:56.000Z</published>
+    <updated>2019-05-15T11:44:12.754Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
+    
+    
+      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
+    
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 4 -- Median of Two Sorted Arrays</title>
@@ -211,7 +231,7 @@
     <link href="http://yoursite.com/2019/03/18/Regular-Expression/"/>
     <id>http://yoursite.com/2019/03/18/Regular-Expression/</id>
     <published>2019-03-18T07:00:22.000Z</published>
-    <updated>2019-03-24T14:51:08.376Z</updated>
+    <updated>2019-05-15T11:44:33.491Z</updated>
     
     <summary type="html">
     
@@ -222,9 +242,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
     
-      <category term="re" scheme="http://yoursite.com/tags/re/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

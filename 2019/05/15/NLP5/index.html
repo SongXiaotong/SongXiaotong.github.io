@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,">
+  <meta name="keywords" content="FSM,RE,">
 
 
 
@@ -81,22 +81,15 @@
 
 
 
-<meta name="description" content="题目重述There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and n">
-<meta name="keywords" content="C++">
+<meta name="keywords" content="FSM,RE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode4:Median of Two Sorted Arrays">
-<meta property="og:url" content="http://yoursite.com/2019/05/14/leetcode4/index.html">
+<meta property="og:title" content="形式语言与自动机">
+<meta property="og:url" content="http://yoursite.com/2019/05/15/NLP5/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
-<meta property="og:description" content="题目重述There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and n">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:image" content="http://yoursite.com/2019/05/14/leetcode4/accept.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/14/leetcode4/runtime.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/14/leetcode4/memory.png">
-<meta property="og:updated_time" content="2019-05-13T16:56:47.745Z">
+<meta property="og:updated_time" content="2019-05-15T11:44:12.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode4:Median of Two Sorted Arrays">
-<meta name="twitter:description" content="题目重述There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and n">
-<meta name="twitter:image" content="http://yoursite.com/2019/05/14/leetcode4/accept.png">
+<meta name="twitter:title" content="形式语言与自动机">
 
 
 
@@ -126,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/14/leetcode4/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/15/NLP5/">
 
 
 
 
 
-  <title>leetcode4:Median of Two Sorted Arrays | Trevi Fountain</title>
+  <title>形式语言与自动机 | Trevi Fountain</title>
   
 
 
@@ -301,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/leetcode4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/15/NLP5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Xiaotong">
@@ -318,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode4:Median of Two Sorted Arrays</h1>
+          <h1 class="post-title" itemprop="name headline">形式语言与自动机</h1>
         
 
         <div class="post-meta">
@@ -330,8 +323,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-14T00:16:47+08:00">
-                2019-05-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-15T19:28:56+08:00">
+                2019-05-15
               </time>
             
 
@@ -353,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
                   </a>
                 </span>
 
@@ -390,23 +383,7 @@
       
 
       
-        <h2 id="题目重述"><a href="#题目重述" class="headerlink" title="题目重述"></a>题目重述</h2><p>There are two sorted arrays <strong>nums1</strong> and <strong>nums2</strong> of size m and n respectively.<br>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).<br>You may assume <strong>nums1</strong> and <strong>nums2</strong> cannot be both empty.<br><a id="more"></a></p>
-<p>两个有序的数组nums1和nums2，其大小分别为m和n。<br>请找到两个数组排序后的中位数，总运行时间复杂度应为O（log（m + n））。<br>您可以假设nums1和nums2不能都为空。</p>
-<p>Example1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">The median is 2.0</span><br></pre></td></tr></table></figure>
-<p>Example2：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">The median is (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>这道题目比较简单，下意识的想法就是使用归并的方法将两个有序的数组进行排序即可很方便地找到中位数，即新建一个结果数组，依次比较两个数组中的最小值，将更小的值放入结果数组中，一共需要比较m+n-1次。</p>
-<p>而由于我们需要得到的结果局哟特殊性——是序列中间的数字，也就是说，在上述归并过程中，我们并不需要得到完整的结果队列，只需要找到结果队列的前(m+n)/2个数据就能够找到中位数，同时，我们也自然地想到，我们并没有必要创建一个数组来存储小于中位数，只需要在前(m+n)/2次判断中找到最大值即可。这时，问题已经被简化为进行(m+n)/2次（实际需要+1）比较得到结果的过程了。</p>
-<p>而此时又出现新的问题：当m+n为奇数时，中位数为合并后的序列的第(m+n)/2+1个值，而当m+n为偶数时，则是第(m+n)/2和第(m+n)/2+1个值的平均数。此时我们可以发现，第(m+n)/2和(m+n)/2+1都可能是我们关注的值，而对于这两个数据，我们只需要进行(m+n)/2+1次比较，并记录每次比较结果next及其前一次比较结果before即可，最后根据m+n的奇偶性决定最终结果应该是next还是(next+before)/2。</p>
-<p>当然我们还要注意，最终的结果应该是double类型。</p>
-<h2 id="代码编写"><a href="#代码编写" class="headerlink" title="代码编写"></a>代码编写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) &#123;</span><br><span class="line">        int totallength = nums1.size() + nums2.size();</span><br><span class="line">        int i = 0, j = 0, curr = 0, before = 0, next = 0;</span><br><span class="line">        while(curr &lt; totallength/2+1)&#123;</span><br><span class="line">            before = next;</span><br><span class="line">            if(i == nums1.size())&#123;</span><br><span class="line">                next = nums2[j];</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            else if (j == nums2.size())&#123;</span><br><span class="line">                next = nums1[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            else if(nums1[i] &lt; nums2[j] )&#123;</span><br><span class="line">                next = nums1[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                next = nums2[j];</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            curr++;</span><br><span class="line">        &#125;</span><br><span class="line">        if(totallength % 2 == 1)&#123;</span><br><span class="line">            return next;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            return double(before+next)/2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>代码见<a href="https://github.com/SongXiaotong/coding/blob/master/C%2B%2B/hard/4_median_of_two_sorted_arrays.cpp" target="_blank" rel="noopener">github</a></p>
-<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="/2019/05/14/leetcode4/accept.png" alt="accept"></p>
-<p><img src="/2019/05/14/leetcode4/runtime.png" alt="runtime"></p>
-<p><img src="/2019/05/14/leetcode4/memory.png" alt="memory"></p>
-<p>感觉自己的方法很常规，不是很快，如果有大佬做得更快希望不吝赐教~</p>
-
+        
       
     </div>
     
@@ -423,7 +400,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag"># C++</a>
+            <a href="/tags/FSM/" rel="tag"># FSM</a>
+          
+            <a href="/tags/RE/" rel="tag"># RE</a>
           
         </div>
       
@@ -436,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/29/UMLet建模/" rel="next" title="UMLet建模">
-                <i class="fa fa-chevron-left"></i> UMLet建模
+              <a href="/2019/05/14/leetcode4-1/" rel="next" title="leetcode 4 -- Median of Two Sorted Arrays">
+                <i class="fa fa-chevron-left"></i> leetcode 4 -- Median of Two Sorted Arrays
               </a>
             
           </div>
@@ -496,17 +475,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -523,7 +493,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -545,7 +515,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -575,22 +545,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目重述"><span class="nav-number">1.</span> <span class="nav-text">题目重述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码编写"><span class="nav-number">3.</span> <span class="nav-text">代码编写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">4.</span> <span class="nav-text">运行结果</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

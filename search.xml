@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[形式语言与自动机]]></title>
+    <url>%2F2019%2F05%2F15%2FNLP5%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>NLP</category>
+      </categories>
+      <tags>
+        <tag>FSM</tag>
+        <tag>RE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode 4 -- Median of Two Sorted Arrays]]></title>
     <url>%2F2019%2F05%2F14%2Fleetcode4-1%2F</url>
     <content type="text"><![CDATA[题目重述There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty. 两个有序的数组nums1和nums2，其大小分别为m和n。请找到两个数组排序后的中位数，总运行时间复杂度应为O（log（m + n））。您可以假设nums1和nums2不能都为空。 Example1： 1234nums1 = [1, 3]nums2 = [2]The median is 2.0 Example2： 1234nums1 = [1, 2]nums2 = [3, 4]The median is (2 + 3)/2 = 2.5 解题思路这道题目比较简单，下意识的想法就是使用归并的方法将两个有序的数组进行排序即可很方便地找到中位数，即新建一个结果数组，依次比较两个数组中的最小值，将更小的值放入结果数组中，一共需要比较m+n-1次。 而由于我们需要得到的结果局哟特殊性——是序列中间的数字，也就是说，在上述归并过程中，我们并不需要得到完整的结果队列，只需要找到结果队列的前(m+n)/2个数据就能够找到中位数，同时，我们也自然地想到，我们并没有必要创建一个数组来存储小于中位数，只需要在前(m+n)/2次判断中找到最大值即可。这时，问题已经被简化为进行(m+n)/2次（实际需要+1）比较得到结果的过程了。 而此时又出现新的问题：当m+n为奇数时，中位数为合并后的序列的第(m+n)/2+1个值，而当m+n为偶数时，则是第(m+n)/2和第(m+n)/2+1个值的平均数。此时我们可以发现，第(m+n)/2和(m+n)/2+1都可能是我们关注的值，而对于这两个数据，我们只需要进行(m+n)/2+1次比较，并记录每次比较结果next及其前一次比较结果before即可，最后根据m+n的奇偶性决定最终结果应该是next还是(next+before)/2。 当然我们还要注意，最终的结果应该是double类型。 代码编写123456789101112131415161718192021222324252627282930313233class Solution &#123;public: double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) &#123; int totallength = nums1.size() + nums2.size(); int i = 0, j = 0, curr = 0, before = 0, next = 0; while(curr &lt; totallength/2+1)&#123; before = next; if(i == nums1.size())&#123; next = nums2[j]; j++; &#125; else if (j == nums2.size())&#123; next = nums1[i]; i++; &#125; else if(nums1[i] &lt; nums2[j] )&#123; next = nums1[i]; i++; &#125; else&#123; next = nums2[j]; j++; &#125; curr++; &#125; if(totallength % 2 == 1)&#123; return next; &#125; else&#123; return double(before+next)/2; &#125; &#125;&#125;; 代码见github 运行结果 感觉自己的方法很常规，不是很快，如果有大佬做得更快希望不吝赐教~]]></content>
@@ -109,8 +121,8 @@
         <category>NLP</category>
       </categories>
       <tags>
+        <tag>RE</tag>
         <tag>python</tag>
-        <tag>re</tag>
       </tags>
   </entry>
   <entry>
