@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-26T18:19:56.532Z</updated>
+  <updated>2019-06-26T18:25:29.626Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/06/26/production/"/>
     <id>http://yoursite.com/2019/06/26/production/</id>
     <published>2019-06-26T03:08:40.000Z</published>
-    <updated>2019-06-26T18:19:56.532Z</updated>
+    <updated>2019-06-26T18:25:29.626Z</updated>
     
     <summary type="html">
     
@@ -272,9 +272,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
     
   </entry>
   
