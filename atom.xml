@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-26T18:25:29.626Z</updated>
+  <updated>2019-06-26T18:59:02.414Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>尼尔森十大交互设计原则</title>
-    <link href="http://yoursite.com/2019/06/26/production/"/>
-    <id>http://yoursite.com/2019/06/26/production/</id>
-    <published>2019-06-26T03:08:40.000Z</published>
-    <updated>2019-06-26T18:25:29.626Z</updated>
+    <title>超级简单易懂的Vuex入门使用指南</title>
+    <link href="http://yoursite.com/2019/06/27/vuex/"/>
+    <id>http://yoursite.com/2019/06/27/vuex/</id>
+    <published>2019-06-26T18:29:08.000Z</published>
+    <updated>2019-06-26T18:59:02.414Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;以QQ为例解读尼尔森十大交互设计原则&quot;&gt;&lt;a href=&quot;#以QQ为例解读尼尔森十大交互设计原则&quot; class=&quot;headerlink&quot; title=&quot;以QQ为例解读尼尔森十大交互设计原则&quot;&gt;&lt;/a&gt;以QQ为例解读尼尔森十大交互设计原则&lt;/h1&gt;&lt;p&gt;作为一个不合格的产品经理，赶紧积累知识才是最重要滴&lt;/p&gt;
+      &lt;h2 id=&quot;一、为什么使用Vuex&quot;&gt;&lt;a href=&quot;#一、为什么使用Vuex&quot; class=&quot;headerlink&quot; title=&quot;一、为什么使用Vuex&quot;&gt;&lt;/a&gt;一、为什么使用Vuex&lt;/h2&gt;&lt;p&gt;当我们进行前端开发时，不可避免要与页面中的数据打交道，而在VUE框架中，我们都知道当在单个页面操作数据时，最基础的是使用data()方法中的返回数据，这部分数据可以在页面中直接获得，通过v-bind响应式在页面中渲染出来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vuex" scheme="http://yoursite.com/tags/vuex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以QQ为例解读尼尔森十大交互设计原则</title>
+    <link href="http://yoursite.com/2019/06/26/production/"/>
+    <id>http://yoursite.com/2019/06/26/production/</id>
+    <published>2019-06-26T03:08:40.000Z</published>
+    <updated>2019-06-26T18:31:27.472Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为一个不合格的产品经理，赶紧积累知识才是最重要滴&lt;/p&gt;
     
     </summary>
     
@@ -60,9 +80,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
-    
       <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
+    
+      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
     
   </entry>
   
@@ -345,9 +365,9 @@
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
     
   </entry>
   

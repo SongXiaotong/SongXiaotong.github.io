@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="algorithm,python,dp,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,20 +81,13 @@
 
 
 
-<meta name="description" content="用例问：最少操作多少次可以把字符串T变为S？例：S=“ABCF”，T=“DBFG”则可以">
-<meta name="keywords" content="algorithm,python,dp">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Min Edit Distance">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/Min-Edit-Distance/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trevi Fountain">
+<meta property="og:url" content="http://yoursite.com/tags/vuex/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
-<meta property="og:description" content="用例问：最少操作多少次可以把字符串T变为S？例：S=“ABCF”，T=“DBFG”则可以">
 <meta property="og:locale" content="zh-Hang">
-<meta property="og:image" content="http://yoursite.com/2019/03/06/Min-Edit-Distance/set.png">
-<meta property="og:updated_time" content="2019-03-25T08:09:24.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Min Edit Distance">
-<meta name="twitter:description" content="用例问：最少操作多少次可以把字符串T变为S？例：S=“ABCF”，T=“DBFG”则可以">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/06/Min-Edit-Distance/set.png">
+<meta name="twitter:title" content="Trevi Fountain">
 
 
 
@@ -124,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/Min-Edit-Distance/">
+  <link rel="canonical" href="http://yoursite.com/tags/vuex/">
 
 
 
 
 
-  <title>Min Edit Distance | Trevi Fountain</title>
+  <title>Tag: vuex | Trevi Fountain</title>
   
 
 
@@ -149,7 +142,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,212 +278,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>vuex<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/Min-Edit-Distance/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Song Xiaotong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Trevi Fountain">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2019/06/27/vuex/" itemprop="url">
+              
+                <span itemprop="name">超级简单易懂的Vuex入门使用指南</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">Min Edit Distance</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-06T19:56:17+08:00">
-                2019-03-06
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-27T02:29:08+08:00" content="2019-06-27">
+          06-27
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NLP/" itemprop="url" rel="index">
-                    <span itemprop="name">NLP</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h3 id="用例"><a href="#用例" class="headerlink" title="用例"></a>用例</h3><p>问：最少操作多少次可以把字符串T变为S？<br>例：S=“ABCF”，T=“DBFG”<br>则可以<br><a id="more"></a></p>
-<ol>
-<li>把D替换为A</li>
-<li>删掉G</li>
-<li>插入C</li>
-</ol>
-<h3 id="最短编辑距离概念"><a href="#最短编辑距离概念" class="headerlink" title="最短编辑距离概念"></a>最短编辑距离概念</h3><p>给定两个字符串S和T，对于T，我们允许如下三个操作</p>
-<ul>
-<li>在任意位置添加任一字符</li>
-<li>删除存在的任一字符</li>
-<li>修改任一字符</li>
-</ul>
-<p>将字符串T转换成成字符串S所使用的操作次数就是编辑距离，其中，最少的操作次数就是最短编辑距离（Min Edit Distance）</p>
-<h3 id="算法逻辑详解"><a href="#算法逻辑详解" class="headerlink" title="算法逻辑详解"></a>算法逻辑详解</h3><p>向S和T中分别插入字符-，使得两个字符串相同字符尽量对齐，且两个字符串最终长度相同</p>
-<p><img src="/2019/03/06/Min-Edit-Distance/set.png" alt="setting"></p>
-<ol>
-<li>如果S，T对应位置都是相同的普通字符，则不扣分，如位置2、4</li>
-<li>如果S，T对应位置都是普通字符但不相同，则扣1分（对应修改操作），如位置1</li>
-<li>如果S的位置为-，但是T位置是不同字符，则扣1分（对应删除操作），如位置5</li>
-<li>如果S的位置为普通字符，但是T位置为-，则扣1分（对应增加操作），如位置3</li>
-</ol>
-<p>设f(i, j)表示字符串S的前i位和T的前j位对齐后的最少扣分，则最后一位的对齐情况为</p>
-<ol>
-<li>当S[i] == T[j] 时，前i-1和j-1位已经完成对齐，此时最小扣分为f(i-1, j-1)</li>
-<li>当S[i] != T[j]时，此时最少扣分为f(i-1, j-1)+1</li>
-<li>当S前i位和T的前j-1位已经对齐，此时最少扣分为f(i, j-1)+1</li>
-<li>当S前i-1位和T的前j位对齐，此时最少扣分为f(i-1, j)+1</li>
-</ol>
-<p>定义一个函数same(i, j)，如果S[i] == T[j]则为0表示不扣分，否则为1也就是扣分，此时f的递推表达式如下</p>
-<p>f(i, j) = min{ f(i-1, j-1)+same(i-1, j-1), f(i-1, j)+1, f(i, j-1)+1}</p>
-<p>初始值：f(0, j) = j, f(i, 0) = i</p>
-<h3 id="动态规划算法"><a href="#动态规划算法" class="headerlink" title="动态规划算法"></a>动态规划算法</h3><p>定义一个矩阵dp[m][n], 其中m=len(string1)+1，n=len(string2)+1，+1是为了避免长度为0；dp[i][j]为string1的前i个字符构成的字符串，与string2的前j个字符构成的字符串的编辑距离。</p>
-<p><strong>插入操作</strong>：在string1的前i个字符后插入一个新的字符，使得插入的字符等于新加入的string2[j]，插入操作对于string1来说，i没有前进，但是对于string2来说，j前进了一位，也就是说，dp[i][j] = dp[i]dp[j-1]+1</p>
-<p><strong>删除操作</strong>：在string1的第i个字符后删除一个字符，使得删除后的字符串string1[:i-1]与word[:j]相同，那么删除操作对于原string2来说，j没有前进，但是i前进了一位，也就是说，dp[i][j] = dp[i-1][j]+(0/1)</p>
-<h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 初始化过程</span><br><span class="line">for j=0 to n do</span><br><span class="line">	f[j] =  j</span><br><span class="line">endfor</span><br><span class="line"></span><br><span class="line"># 连续处理</span><br><span class="line">for i=1 to m do</span><br><span class="line">	last = f[0]</span><br><span class="line">	f[0] = i</span><br><span class="line">	for j=1 to n do</span><br><span class="line">		temp = f[i, j]</span><br><span class="line">		f[i, j] = min(last+same(i, 1), remp+1, temp+1, f[j-1]+1)</span><br><span class="line">		last = temp</span><br><span class="line">	endfor</span><br><span class="line">endfor</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/SongXiaotong/NLP_KG/tree/master/MinEditDis" target="_blank" rel="noopener">算法代码</a></p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
-          
-            <a href="/tags/python/" rel="tag"># python</a>
-          
-            <a href="/tags/dp/" rel="tag"># dp</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/02/27/hw1/" rel="next" title="软件的本质与软件工程科学">
-                <i class="fa fa-chevron-left"></i> 软件的本质与软件工程科学
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/07/hw2/" rel="prev" title="软件的本质与软件工程科学(2)">
-                软件的本质与软件工程科学(2) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -498,10 +331,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -522,17 +351,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,22 +421,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用例"><span class="nav-number">1.</span> <span class="nav-text">用例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最短编辑距离概念"><span class="nav-number">2.</span> <span class="nav-text">最短编辑距离概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法逻辑详解"><span class="nav-number">3.</span> <span class="nav-text">算法逻辑详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划算法"><span class="nav-number">4.</span> <span class="nav-text">动态规划算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪代码"><span class="nav-number">5.</span> <span class="nav-text">伪代码</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -771,10 +575,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

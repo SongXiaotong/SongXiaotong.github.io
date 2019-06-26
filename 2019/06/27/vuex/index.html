@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hang">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vuex,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Trevi Fountain" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="一、为什么使用Vuex当我们进行前端开发时，不可避免要与页面中的数据打交道，而在VUE框架中，我们都知道当在单个页面操作数据时，最基础的是使用data()方法中的返回数据，这部分数据可以在页面中直接获得，通过v-bind响应式在页面中渲染出来。">
+<meta name="keywords" content="vuex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="超级简单易懂的Vuex入门使用指南">
+<meta property="og:url" content="http://yoursite.com/2019/06/27/vuex/index.html">
+<meta property="og:site_name" content="Trevi Fountain">
+<meta property="og:description" content="一、为什么使用Vuex当我们进行前端开发时，不可避免要与页面中的数据打交道，而在VUE框架中，我们都知道当在单个页面操作数据时，最基础的是使用data()方法中的返回数据，这部分数据可以在页面中直接获得，通过v-bind响应式在页面中渲染出来。">
+<meta property="og:locale" content="zh-Hang">
+<meta property="og:updated_time" content="2019-06-26T18:59:02.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="超级简单易懂的Vuex入门使用指南">
+<meta name="twitter:description" content="一、为什么使用Vuex当我们进行前端开发时，不可避免要与页面中的数据打交道，而在VUE框架中，我们都知道当在单个页面操作数据时，最基础的是使用data()方法中的返回数据，这部分数据可以在页面中直接获得，通过v-bind响应式在页面中渲染出来。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":30,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/27/vuex/">
+
+
+
+
+
+  <title>超级简单易懂的Vuex入门使用指南 | Trevi Fountain</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hang">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Trevi Fountain</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/vuex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">超级简单易懂的Vuex入门使用指南</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-27T02:29:08+08:00">
+                2019-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、为什么使用Vuex"><a href="#一、为什么使用Vuex" class="headerlink" title="一、为什么使用Vuex"></a>一、为什么使用Vuex</h2><p>当我们进行前端开发时，不可避免要与页面中的数据打交道，而在VUE框架中，我们都知道当在单个页面操作数据时，最基础的是使用data()方法中的返回数据，这部分数据可以在页面中直接获得，通过v-bind响应式在页面中渲染出来。</p>
+<a id="more"></a>
+<p>但是当我们需要在多个页面间获取组件状态进行数据交互的时候，data中返回出来的数据进行传递的过程显然不是很方便。这时候，Vuex就是一个帮助我们进行数据状态管理的有效的工具了。</p>
+<p>Vuex是一个专为Vue.js应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。Vuex 也集成到 Vue 的官方调试工具 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener">devtools extension </a>，提供了诸如零配置的 time-travel 调试、状态快照导入导出等高级调试功能。</p>
+<h2 id="二、Vuex基础使用"><a href="#二、Vuex基础使用" class="headerlink" title="二、Vuex基础使用"></a>二、Vuex基础使用</h2><h3 id="1-Store"><a href="#1-Store" class="headerlink" title="1. Store"></a>1. Store</h3><p>Vuex应用的核心是store(仓库)，store是一个包含着组件状态信息的容器，当store中的状态发生变化时，相应的组件也会在同时得到高效的更新。</p>
+<p>对于一个最简单的store来说，我们可以用下面的方法进行创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">     count: 0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>我们可以看到store中包含两个部分，一个是state，state可以理解为我们存储起来的状态对象，另一个是mutation，mutation是一种修改state的方法，后面会提到。</p>
+<h3 id="2-State"><a href="#2-State" class="headerlink" title="2. State"></a>2. State</h3><p>前面说到，state中保存的数据就是我们存储起来的内容，从上面store的声明中也可以看出来数据是用键值对{count：0}的形式保存在store仓库中的，观察结构结构我们也可以发现，获取state的方法也很简单，通过store.state就可以直接获取到state中所有的状态对象了。</p>
+<p>但是如何在vue组件中展示state状态呢？</p>
+<h4 id="（1）-获取state状态"><a href="#（1）-获取state状态" class="headerlink" title="（1） 获取state状态"></a>（1） 获取state状态</h4><p>由于vuex的状态存储是响应式的，从store中读取状态最简单的方法就是在计算属性中返回我们需要的状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    count () &#123;</span><br><span class="line">      return store.state.count</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>  }</p>
+<p>但是，这种模式导致组件依赖全局状态单例，简单来说，就是每次需要获取state中的数据时都要进行导入store仓库的工作。</p>
+<h4 id="（2）解决重复导入问题"><a href="#（2）解决重复导入问题" class="headerlink" title="（2）解决重复导入问题"></a>（2）解决重复导入问题</h4><p>为了解决上述重复导入的问题，vuex提供了另一种机制，将状态从根组件“注入”到每一个子组件中（使用Vue.use(Vuex)方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const app = new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  // 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件</span><br><span class="line">  store,</span><br><span class="line">  components: &#123; Counter &#125;,</span><br><span class="line">  template: `</span><br><span class="line">    &lt;div class=&quot;app&quot;&gt;</span><br><span class="line">      &lt;counter&gt;&lt;/counter&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  `</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>此时，所有的子组件都能够通过this.$store访问到这个store实例，从而获取到store中的state。</p>
+<p>这时候，虽然可以获取到store了，但是出现了新的问题，当我们需要很多store的state中的数据时，重复使用计算属性中的函数返回方法显得十分复杂和冗余，那么这个应该怎么解决呢？</p>
+<h4 id="（3）mapState辅助函数"><a href="#（3）mapState辅助函数" class="headerlink" title="（3）mapState辅助函数"></a>（3）mapState辅助函数</h4><p>减少计算属性编写的复杂度当然也是有办法的，mapState辅助函数可以帮助我们生成计算属性，大大降低了我们编写函数的复杂度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 在单独构建的版本中辅助函数为 Vuex.mapState</span><br><span class="line">import &#123; mapState &#125; from &apos;vuex&apos;</span><br><span class="line"> </span><br><span class="line">export default &#123;</span><br><span class="line">  // ...</span><br><span class="line">  computed: mapState(&#123;</span><br><span class="line">    // 箭头函数可使代码更简练</span><br><span class="line">    count: state =&gt; state.count,</span><br><span class="line"> </span><br><span class="line">    // 传字符串参数 &apos;count&apos; 等同于 `state =&gt; state.count`</span><br><span class="line">    countAlias: &apos;count&apos;,</span><br><span class="line"> </span><br><span class="line">    // 为了能够使用 `this` 获取局部状态，必须使用常规函数</span><br><span class="line">    countPlusLocalState (state) &#123;</span><br><span class="line">      return state.count + this.localCount</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在文件中首先引入vuex中的mapState方法，然后在computed的部分使用mapstate进行数据的获取。使用state=&gt;state.count的方法修剪函数形式，使得代码更加简练，同时，单独传递字符串参数的形式也是等同的，我们可以根据自己的需要自行选择。</p>
+<p>在这里，我们提到一种更简练的方法，就是不需要冒号前面的值进行变量名的声明，而是直接传递字符串参数完成映射（如下面的形式），但是这种形式个人不是很推荐，就感觉看起来不规格（？），所以我就不多描述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState([</span><br><span class="line">  // 映射 this.count 为 store.state.count</span><br><span class="line">  &apos;count&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>回到开始的话题，其实从上面的示例中我们也可以发现，如果需要使用this获取到vue文件中本身的状态，使用mapState显得不是很方便，仍旧需要常规函数的写法。</p>
+<h4 id="（4）对象展开运算符"><a href="#（4）对象展开运算符" class="headerlink" title="（4）对象展开运算符"></a>（4）对象展开运算符</h4><p>mapState会返回一个对象，当我们需要将这个返回的对象和局部计算属性混合使用时，我们就需要工具函数将多个对象合并为一个，使得我们可以将最终的对象传递给computed属性，同时简化写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  localComputed () &#123; /* ... */ &#125;,</span><br><span class="line">  // 使用对象展开运算符将此对象混入到外部对象中</span><br><span class="line">  ...mapState(&#123;</span><br><span class="line">    // ...</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-Mutation"><a href="#3-Mutation" class="headerlink" title="3.  Mutation"></a>3.  Mutation</h3><p>说完了state的获取，这时候我们下一步一定要学习的就是怎么对store中state进行修改。首先，Store中的state是不能被我们直接更改的，想要更改唯一的方法就是显示提交(commit)，也就是使用mutation。</p>
+<h4 id="（1）-mutation基础"><a href="#（1）-mutation基础" class="headerlink" title="（1） mutation基础"></a>（1） mutation基础</h4><p>每个mutation都有一个字符串的事件类型(type)和一个回调函数(handler)，这个回调函数就是我们实际进行state修改的地方。它接受state作为第一个参数，显然，state中的所有数据都可以在回调函数进行修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    count: 1</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">      // 变更状态</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="（2）commit方法"><a href="#（2）commit方法" class="headerlink" title="（2）commit方法"></a>（2）commit方法</h4><p>mutation的格式我们理解了，那我们应该怎么使用这个回调函数呢？直接掉用吗？</p>
+<p>答案当然是不是。</p>
+<p>我们不可以直接调用handler，handler可以理解为当触发了一个事件类型为increment的mutation时，回调函数中的事件就会发生，这个触发的过程就是commit方法。</p>
+<p>对于上面的increment函数，我们可以使用下面的语句在vue中进行触发</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.commit(&apos;increment&apos;)</span><br></pre></td></tr></table></figure>
+<h4 id="（3）向mutation回调函数中传递参数"><a href="#（3）向mutation回调函数中传递参数" class="headerlink" title="（3）向mutation回调函数中传递参数"></a>（3）向mutation回调函数中传递参数</h4><p>想要修改数据，传递新的数据给回调函数就是我们下一步思考的了，这个新数据我们称之为mutation的载荷(payload)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mutations: &#123;</span><br><span class="line">  increment (state, n) &#123;</span><br><span class="line">    state.count += n</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.commit(&apos;increment&apos;, 10)</span><br></pre></td></tr></table></figure>
+<p>在绝大多数情况下，载荷应该是一个对象，在实际应用中，如果想要传递多个参数，通常我们会选择将这些数据封装到一个对象（如json对象）中，再将这个对象作为荷载传递给相应的回调函数</p>
+<h4 id="（4）-mapMutations辅助函数"><a href="#（4）-mapMutations辅助函数" class="headerlink" title="（4） mapMutations辅助函数"></a>（4） mapMutations辅助函数</h4><p>不用多说可能大家也能看出来，这个和mapState是一个作用，都是便于在vue文件中引入store中的state和mutation，使用方法其实也是一样的，区别只是在于由于mutation的主要工作内容是其中的回调函数，所以它的获取不需要使用计算属性，而是使用method即可，这里就不过多阐述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import &#123; mapMutations &#125; from &apos;vuex&apos;</span><br><span class="line"> </span><br><span class="line">export default &#123;</span><br><span class="line">  // ...</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapMutations([</span><br><span class="line">      &apos;increment&apos;, // 将 `this.increment()` 映射为 `this.$store.commit(&apos;increment&apos;)`</span><br><span class="line"> </span><br><span class="line">      // `mapMutations` 也支持载荷：</span><br><span class="line">      &apos;incrementBy&apos; // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit(&apos;incrementBy&apos;, amount)`</span><br><span class="line">    ]),</span><br><span class="line">    ...mapMutations(&#123;</span><br><span class="line">      add: &apos;increment&apos; // 将 `this.add()` 映射为 `this.$store.commit(&apos;increment&apos;)`</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-Action"><a href="#4-Action" class="headerlink" title="4. Action"></a>4. Action</h3><p>Action和mutation是类似的，主要的区别在于action可以处理系统中的异步回调方法，而mutation只能是同步的</p>
+<h4 id="（1）Action与mutation"><a href="#（1）Action与mutation" class="headerlink" title="（1）Action与mutation"></a>（1）Action与mutation</h4><p>Action函数接受一个与store实例具有相同方法和属性的context对象，所以在action中我们可以使用commit进行一个mutation的提交。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">actions: &#123;</span><br><span class="line">  increment (&#123; commit &#125;) &#123;</span><br><span class="line">    commit(&apos;increment&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这一点之所以被我放在action介绍的第一点，是因为这种在action作为异步调用方法，在其中使用commit方法进行state修改的写法通常被我们用来将api调用后获取到的数据与当前state进行交互。例如，将从服务器获取到的某数据赋值给state中的某变量。</p>
+<p>多数情况下，我们在action中进行api的调用（如get方法），并在对应api调用的回调中将获取到的数据使用commit方法提交给mutation以便于组件状态state的修改</p>
+<h4 id="（2）action的使用"><a href="#（2）action的使用" class="headerlink" title="（2）action的使用"></a>（2）action的使用</h4><p>action与mutation写法类似，调用方法也是类似的，我们都需要使用一种特殊的触发方法进行action中的调用，而这次不应该使用commit，而是使用dispatch分发</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(&apos;increment&apos;)</span><br></pre></td></tr></table></figure>
+<p>同理，dispatch也同样支持载荷的方式，具体方法与mutation完全一样，我就不过多赘述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(&apos;increment&apos;, 10)</span><br></pre></td></tr></table></figure>
+<h4 id="（3）mapAction赋值函数"><a href="#（3）mapAction赋值函数" class="headerlink" title="（3）mapAction赋值函数"></a>（3）mapAction赋值函数</h4><p>很好，写到这感觉道理大家应该都懂，我也就不多说，直接上代码示例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import &#123; mapActions &#125; from &apos;vuex&apos;</span><br><span class="line"> </span><br><span class="line">export default &#123;</span><br><span class="line">  // ...</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapActions([</span><br><span class="line">      &apos;increment&apos;, // 将 `this.increment()` 映射为 `this.$store.dispatch(&apos;increment&apos;)`</span><br><span class="line"> </span><br><span class="line">      // `mapActions` 也支持载荷：</span><br><span class="line">      &apos;incrementBy&apos; // 将 `this.incrementBy(amount)` 映射为 `this.$store.dispatch(&apos;incrementBy&apos;, amount)`</span><br><span class="line">    ]),</span><br><span class="line">    ...mapActions(&#123;</span><br><span class="line">      add: &apos;increment&apos; // 将 `this.add()` 映射为 `this.$store.dispatch(&apos;increment&apos;)`</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="（4）-异步方法"><a href="#（4）-异步方法" class="headerlink" title="（4） 异步方法"></a>（4） 异步方法</h4><p>异步就会出现问题：action什么时候结束？想要等到结束之后再进行某种行为应该怎么办？<br>稍微熟悉前端的同学就应该知道，对于结束后的处理，我们都是使用then方法的，action也不例外，使用下面的方法就可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(&apos;actionA&apos;).then(() =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>而这种方法的前提自然也就是要把需要的数据return出来，dispatch可以处理被触发的action的处理函数返回的promise，而且dispatch仍旧返回promise，action方法的写法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">actions: &#123;</span><br><span class="line">  actionA (&#123; commit &#125;) &#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">      setTimeout(() =&gt; &#123;</span><br><span class="line">        commit(&apos;someMutation&apos;)</span><br><span class="line">        resolve()</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时在另外一个action中我们也可以进行如下的操作<br>actions: {</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// ...</span><br><span class="line">  actionB (&#123; dispatch, commit &#125;) &#123;</span><br><span class="line">    return dispatch(&apos;actionA&apos;).then(() =&gt; &#123;</span><br><span class="line">      commit(&apos;someOtherMutation&apos;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>涉及async/await的更复杂的组合也可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">actions: &#123;</span><br><span class="line">  async actionA (&#123; commit &#125;) &#123;</span><br><span class="line">    commit(&apos;gotData&apos;, await getData())</span><br><span class="line">  &#125;,</span><br><span class="line">  async actionB (&#123; dispatch, commit &#125;) &#123;</span><br><span class="line">    await dispatch(&apos;actionA&apos;) // 等待 actionA 完成</span><br><span class="line">    commit(&apos;gotOtherData&apos;, await getOtherData())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Getter"><a href="#5-Getter" class="headerlink" title="5. Getter"></a>5. Getter</h3><p>getter主要是用来获取state数据的，有计算属性在这个我实在是很少用到，感兴趣的同学可以去查看官方文档，就不说啦</p>
+<h3 id="6-modules"><a href="#6-modules" class="headerlink" title="6. modules"></a>6. modules</h3><p>学会使用vuex的store、state、action、commit，基础的入门就已经完成啦，而modules的模块化也仅仅是指在一个store文件中引入其他store，一个import就做到了！</p>
+<p>额外需要注意的可能就是辅助函数可以新增一个参数表示快捷的访问子store的内容（事实上也不是必须的），感兴趣的大家自己学习就行啦~</p>
+<h2 id="三、Vuex使用中需要注意的事"><a href="#三、Vuex使用中需要注意的事" class="headerlink" title="三、Vuex使用中需要注意的事"></a>三、Vuex使用中需要注意的事</h2><p>（1）Vuex是好用的模式，但是并不意味着所有数据都要使用vuex进行保存，滥用vuex造成代码冗长和不直观可是一点性价比都没有的，这也是单页面应用并不推荐使用vuex的原因。我们要根据代码环境判断是否有必要使用vuex保存某个状态数据。</p>
+<p>（2）Mutation以及action文件在编写的过程中，我们通常使用常量代替其事件类型，比如下面的表示方式，很像是给文件添加了一个目录，这样的好处是代码的合作者可以很清晰地总结mutation文件中声明的所有事件类型，我们自己在使用的时候也是更加方便的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export const SOME_MUTATION = &apos;SOME_MUTATION&apos;</span><br><span class="line">    // 我们可以使用 ES2015 风格的计算属性命名功能来使用一个常量作为函数名</span><br><span class="line">  [SOME_MUTATION] (state) &#123;</span><br><span class="line">     // mutate state</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>（3）Vuex中的状态是响应式的，但是对于数组的响应过程由于DOM的渲染，只对长度敏感，也就是说，对于数组的状态，vuex只能对长度变化作出反应，并进行增加或截取，具体的数据内容是获取不到的，想要渲染的话要使用Vue.set方法（事实上我还是不行，等待大佬解答）</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>学习和使用vue做好前端开发是个说快很快说慢也很慢的过程，共勉。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vuex/" rel="tag"># vuex</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/26/production/" rel="next" title="以QQ为例解读尼尔森十大交互设计原则">
+                <i class="fa fa-chevron-left"></i> 以QQ为例解读尼尔森十大交互设计原则
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Song Xiaotong">
+            
+              <p class="site-author-name" itemprop="name">Song Xiaotong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、为什么使用Vuex"><span class="nav-number">1.</span> <span class="nav-text">一、为什么使用Vuex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Vuex基础使用"><span class="nav-number">2.</span> <span class="nav-text">二、Vuex基础使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Store"><span class="nav-number">2.1.</span> <span class="nav-text">1. Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-State"><span class="nav-number">2.2.</span> <span class="nav-text">2. State</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）-获取state状态"><span class="nav-number">2.2.1.</span> <span class="nav-text">（1） 获取state状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）解决重复导入问题"><span class="nav-number">2.2.2.</span> <span class="nav-text">（2）解决重复导入问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（3）mapState辅助函数"><span class="nav-number">2.2.3.</span> <span class="nav-text">（3）mapState辅助函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（4）对象展开运算符"><span class="nav-number">2.2.4.</span> <span class="nav-text">（4）对象展开运算符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Mutation"><span class="nav-number">2.3.</span> <span class="nav-text">3.  Mutation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）-mutation基础"><span class="nav-number">2.3.1.</span> <span class="nav-text">（1） mutation基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）commit方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">（2）commit方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（3）向mutation回调函数中传递参数"><span class="nav-number">2.3.3.</span> <span class="nav-text">（3）向mutation回调函数中传递参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（4）-mapMutations辅助函数"><span class="nav-number">2.3.4.</span> <span class="nav-text">（4） mapMutations辅助函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Action"><span class="nav-number">2.4.</span> <span class="nav-text">4. Action</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）Action与mutation"><span class="nav-number">2.4.1.</span> <span class="nav-text">（1）Action与mutation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）action的使用"><span class="nav-number">2.4.2.</span> <span class="nav-text">（2）action的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（3）mapAction赋值函数"><span class="nav-number">2.4.3.</span> <span class="nav-text">（3）mapAction赋值函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（4）-异步方法"><span class="nav-number">2.4.4.</span> <span class="nav-text">（4） 异步方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Getter"><span class="nav-number">2.5.</span> <span class="nav-text">5. Getter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-modules"><span class="nav-number">2.6.</span> <span class="nav-text">6. modules</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Vuex使用中需要注意的事"><span class="nav-number">3.</span> <span class="nav-text">三、Vuex使用中需要注意的事</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最后"><span class="nav-number">3.1.</span> <span class="nav-text">最后</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Song Xiaotong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">~~本站共21.6k字呦~~</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
