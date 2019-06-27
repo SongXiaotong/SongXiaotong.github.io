@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-27T07:37:07.098Z</updated>
+  <updated>2019-06-27T09:09:02.502Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>超级易学易上手的AXURE入门使用指南</title>
+    <link href="http://yoursite.com/2019/06/27/axure/"/>
+    <id>http://yoursite.com/2019/06/27/axure/</id>
+    <published>2019-06-27T07:43:20.000Z</published>
+    <updated>2019-06-27T09:09:02.502Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Axure简介&quot;&gt;&lt;a href=&quot;#Axure简介&quot; class=&quot;headerlink&quot; title=&quot;Axure简介&quot;&gt;&lt;/a&gt;Axure简介&lt;/h2&gt;&lt;p&gt;Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品设计" scheme="http://yoursite.com/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="axure" scheme="http://yoursite.com/tags/axure/"/>
+    
+      <category term="原型" scheme="http://yoursite.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="交互设计" scheme="http://yoursite.com/tags/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>超级基础实用的TAPD使用指南</title>
@@ -100,9 +124,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
-    
       <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
+    
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
     
   </entry>
   
