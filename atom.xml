@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-27T09:09:02.502Z</updated>
+  <updated>2019-06-27T16:45:58.370Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6新特性总结</title>
+    <link href="http://yoursite.com/2019/06/28/ES6%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/06/28/ES6新特性总结/</id>
+    <published>2019-06-27T16:30:21.000Z</published>
+    <updated>2019-06-27T16:45:58.370Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文对ES6新特性进行了总结记录，详情请见各大ES6教程（本文主要为&lt;a href=&quot;https://www.runoob.com/w3cnote_genre/es6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程&lt;/a&gt;内容）&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>超级易学易上手的AXURE入门使用指南</title>
@@ -124,9 +151,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
-    
       <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
+    
+      <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
     
   </entry>
   
@@ -434,22 +461,6 @@
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo</title>
-    <link href="http://yoursite.com/2019/02/27/hello-world/"/>
-    <id>http://yoursite.com/2019/02/27/hello-world/</id>
-    <published>2019-02-27T05:23:14.241Z</published>
-    <updated>2019-02-27T17:00:30.155Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
