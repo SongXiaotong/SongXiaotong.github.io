@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-27T16:45:58.370Z</updated>
+  <updated>2019-06-27T16:47:11.377Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,18 +21,11 @@
     <link href="http://yoursite.com/2019/06/28/ES6%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2019/06/28/ES6新特性总结/</id>
     <published>2019-06-27T16:30:21.000Z</published>
-    <updated>2019-06-27T16:45:58.370Z</updated>
+    <updated>2019-06-27T16:47:11.377Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;本文对ES6新特性进行了总结记录，详情请见各大ES6教程（本文主要为&lt;a href=&quot;https://www.runoob.com/w3cnote_genre/es6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程&lt;/a&gt;内容）&lt;/p&gt;
-&lt;h3
-        
-      
+      &lt;p&gt;本文对ES6新特性进行了总结记录，详情请见各大ES6教程（本文主要为&lt;a href=&quot;https://www.runoob.com/w3cnote_genre/es6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程&lt;/a&gt;内容）&lt;/p&gt;
     
     </summary>
     
@@ -151,9 +144,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
-    
       <category term="FSM" scheme="http://yoursite.com/tags/FSM/"/>
+    
+      <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
     
   </entry>
   
@@ -363,9 +356,9 @@
       <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="RE" scheme="http://yoursite.com/tags/RE/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -436,9 +429,9 @@
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
     
   </entry>
   
