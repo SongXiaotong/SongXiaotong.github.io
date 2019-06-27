@@ -66,8 +66,8 @@
         <category>NLP</category>
       </categories>
       <tags>
-        <tag>FSM</tag>
         <tag>RE</tag>
+        <tag>FSM</tag>
       </tags>
   </entry>
   <entry>
@@ -179,8 +179,8 @@
         <category>NLP</category>
       </categories>
       <tags>
-        <tag>RE</tag>
         <tag>python</tag>
+        <tag>RE</tag>
       </tags>
   </entry>
   <entry>
@@ -216,8 +216,8 @@
       </categories>
       <tags>
         <tag>algorithm</tag>
-        <tag>python</tag>
         <tag>dp</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
