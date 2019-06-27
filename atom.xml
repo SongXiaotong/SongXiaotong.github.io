@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-26T18:59:02.414Z</updated>
+  <updated>2019-06-27T07:37:07.098Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>超级基础实用的TAPD使用指南</title>
+    <link href="http://yoursite.com/2019/06/27/TAPD/"/>
+    <id>http://yoursite.com/2019/06/27/TAPD/</id>
+    <published>2019-06-27T05:57:08.000Z</published>
+    <updated>2019-06-27T07:37:07.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TAPD简介&quot;&gt;&lt;a href=&quot;#TAPD简介&quot; class=&quot;headerlink&quot; title=&quot;TAPD简介&quot;&gt;&lt;/a&gt;TAPD简介&lt;/h2&gt;&lt;p&gt;TAPD（Tencent Agile Product Development）全名为腾讯敏捷产品研发平台，已在腾讯内部运营12年，并于2017年5月正式对外开放。TAPD的主要作用是帮助项目管理者更好进行项目管理，为项目人员提供一系列项目协作解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品设计" scheme="http://yoursite.com/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="项目开发" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>超级简单易懂的Vuex入门使用指南</title>
@@ -365,9 +385,9 @@
     
       <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

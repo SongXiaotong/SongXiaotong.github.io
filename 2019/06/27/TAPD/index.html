@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hang">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="项目开发,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Trevi Fountain" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="TAPD简介TAPD（Tencent Agile Product Development）全名为腾讯敏捷产品研发平台，已在腾讯内部运营12年，并于2017年5月正式对外开放。TAPD的主要作用是帮助项目管理者更好进行项目管理，为项目人员提供一系列项目协作解决方案。">
+<meta name="keywords" content="项目开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="超级基础实用的TAPD使用指南">
+<meta property="og:url" content="http://yoursite.com/2019/06/27/TAPD/index.html">
+<meta property="og:site_name" content="Trevi Fountain">
+<meta property="og:description" content="TAPD简介TAPD（Tencent Agile Product Development）全名为腾讯敏捷产品研发平台，已在腾讯内部运营12年，并于2017年5月正式对外开放。TAPD的主要作用是帮助项目管理者更好进行项目管理，为项目人员提供一系列项目协作解决方案。">
+<meta property="og:locale" content="zh-Hang">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/12.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/13.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/14.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/15.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/16.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/17.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/18.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/19.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/27/TAPD/20.png">
+<meta property="og:updated_time" content="2019-06-27T07:37:07.098Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="超级基础实用的TAPD使用指南">
+<meta name="twitter:description" content="TAPD简介TAPD（Tencent Agile Product Development）全名为腾讯敏捷产品研发平台，已在腾讯内部运营12年，并于2017年5月正式对外开放。TAPD的主要作用是帮助项目管理者更好进行项目管理，为项目人员提供一系列项目协作解决方案。">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/27/TAPD/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":30,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/27/TAPD/">
+
+
+
+
+
+  <title>超级基础实用的TAPD使用指南 | Trevi Fountain</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hang">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Trevi Fountain</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/TAPD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">超级基础实用的TAPD使用指南</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-27T13:57:08+08:00">
+                2019-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品设计/" itemprop="url" rel="index">
+                    <span itemprop="name">产品设计</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="TAPD简介"><a href="#TAPD简介" class="headerlink" title="TAPD简介"></a>TAPD简介</h2><p>TAPD（Tencent Agile Product Development）全名为腾讯敏捷产品研发平台，已在腾讯内部运营12年，并于2017年5月正式对外开放。TAPD的主要作用是帮助项目管理者更好进行项目管理，为项目人员提供一系列项目协作解决方案。</p>
+<a id="more"></a>
+<p><img src="/2019/06/27/TAPD/1.png" alt></p>
+<p>TAPD主要提供看板、在线文档、敏捷需求规划、迭代计划&amp;跟踪、任务工时管理、缺陷跟踪管理、测试计划&amp;用例、持续集成、持续交付&amp;部署等丰富的可配置功能，并提供三种敏捷协作解决方案，满足不同客户场景需要：</p>
+<p><strong>1、轻量协作解决方案</strong>：适用于不同行业协作场景，满足任务协同，文档协作和沟通交流的场景所需，帮助团队可视化工作进展、沉淀分享项目知识、提升团队协作效率。</p>
+<p><strong>2、敏捷研发解决方案</strong>：专为产品研发场景打造，针对研发痛点，提供贯穿敏捷研发生命周期的一站式服务，帮助团队提升研发效率，高质量交付成功产品。</p>
+<p><strong>3、Devops解决方案</strong>：专为DevOps持续交付场景打造，深度整合研发工具链，助力团队高效、可靠地构建与发布产品，快速交付用户价值。</p>
+<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><p>很好上面的内容看看就行，接下来才是真正有用的地方，可以免费试用的TAPD分为标准版和专业版，我注册的是专业版，包含需求、迭代、故事墙、缺陷、报表、文档等6个核心应用，还支持通过移动端管理工作。</p>
+<p><img src="/2019/06/27/TAPD/3.png" alt></p>
+<p><img src="/2019/06/27/TAPD/4.png" alt></p>
+<p>下面将为大家介绍几种TAPD最常用的工具用法，干货满满！</p>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>任务列表在TAPD中体现的是工作台，这是左侧主菜单栏的第一个子项。</p>
+<p><img src="/2019/06/27/TAPD/2.png" alt></p>
+<p>在工作台下，我们可以看到，TAPD将所有的任务划分为我的待办、我的已办、我创建的以及我关注的，从这个界面我们可以快速了解到我们需要完成的任务，并对已经完成的任务进行二次检查。</p>
+<h3 id="在线文档"><a href="#在线文档" class="headerlink" title="在线文档"></a>在线文档</h3><p>对于项目人员尤其是产品工作者来说，编写文档是必须而且是重中之重的时，在线文档协作的功能更是必不可少的，一款能够支持多成员实时协作的文档编辑软件在团队项目开发过程中一定是备受青睐的。</p>
+<p><img src="/2019/06/27/TAPD/8.png" alt></p>
+<p>TAPD支持普通文档与思维导图的创建，文档的创建就是一个在线的编辑器，满足简单的排版需求，思维导图也是同理，两种文本与图形工具操作简单，不多做解释</p>
+<p><img src="/2019/06/27/TAPD/9.png" alt></p>
+<p><img src="/2019/06/27/TAPD/10.png" alt></p>
+<h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>项目是TAPD的基本工作单位，也是我们进入TAPD时看到的第一个页面，在左侧主菜单列表的第三个选项“项目”中也可以快速进入某个项目。我们前面使用的个人文档和工作台事项都是从项目中延伸出来的功能。</p>
+<p>TAPD为用户提供了四种项目模板，分别为轻量团队面板，问题跟踪管理，轻量敏捷项目管理，以及敏捷全生命周期管理，根据公司的规模等注册信息的不同，我们可选的模板范围是不同的，我在注册专业版时选择的为1-10人团队，在项目创建的位置上允许我选择三种项目。</p>
+<p>输入项目标题和项目描述，这样一个简单的模板项目就创建成功了</p>
+<p><img src="/2019/06/27/TAPD/5.png" alt></p>
+<p>创建项目后，系统会提示我们导入成员，此时根据需要邀请即可，也可以暂时不进行操作。</p>
+<p><img src="/2019/06/27/TAPD/6.png" alt></p>
+<p>添加成员后，这个项目就可以正常运行了，项目内部的使用根据模板的不同有不同的核心内容，这部分我们稍后再说，我们先来说如何进行项目管理。</p>
+<p>进入项目管理只需要点击最上方的设置图标即可进入项目管理界面，TAPD对于界面的设置主体使用卡片式结构，也充分利用了菜单层级的设计，逻辑构图相当清晰，我们可以很轻器地找到自己需要设置的入口位置。</p>
+<p><img src="/2019/06/27/TAPD/7.png" alt></p>
+<h3 id="项目功能"><a href="#项目功能" class="headerlink" title="项目功能"></a>项目功能</h3><p>接下来的部分，我们将分别介绍项目模板中支持的各标签页功能具有的特性，专业版包含需求、迭代、故事墙、缺陷、报表、文档等6个核心应用，还支持通过移动端管理工作。在这里，我们选择进行需求、迭代和看板的基础介绍，同时，由于文档在前面已经有所介绍，加上相对较为简单，便也不做阐述，但是文档始终还是比较关键的部分。</p>
+<h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>在TAPD中，产品需求被称为“User Story”，或简称为Story，是从用户的角度来描述的独立功能点。TAPD支持需求的创建、层级划分、分类、导入/导出、过滤、分析与统计，主要应用于需求的规范创建、backlog视图的生成与划分、工作流的状态管理，在这里，我们仅仅对最基础的创建、层级划分、以及工作流管理进行介绍。</p>
+<h5 id="创建需求"><a href="#创建需求" class="headerlink" title="创建需求"></a>创建需求</h5><p><img src="/2019/06/27/TAPD/11.png" alt></p>
+<p>通过创建需求按钮，我们可以进行需求的快速创建，同时，可以根据需求模板进行规范的设置</p>
+<p><img src="/2019/06/27/TAPD/12.png" alt></p>
+<h5 id="层级划分"><a href="#层级划分" class="headerlink" title="层级划分"></a>层级划分</h5><p>TAPD支持需求的多层结构管理，对于规模较大的需求，可以使用子需求的创建进行划分，从而细化需求结构。</p>
+<p><img src="/2019/06/27/TAPD/13.png" alt></p>
+<h5 id="工作流管理"><a href="#工作流管理" class="headerlink" title="工作流管理"></a>工作流管理</h5><p>TAPD支持需求的生命周期流程的定制，这样不同的项目需求可以有不同的生命周期流程，通过这个流程驱动，达到研发过程中不同角色成员协作完成Story的研发生命周期管理。</p>
+<p>当前处理人进入需求的查看页面，在需求状态流转部分，用户可以选择下一个状态进行流转，并补充流转处理意见，从而完成需求生命周期的当前节点控制。</p>
+<p><img src="/2019/06/27/TAPD/14.png" alt></p>
+<h4 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h4><p>迭代是一个固定的时间段的开发计划，每个迭代将补充项目产品的某些特性。项目通过迭代划分与发布，可以让产品开发更加敏捷。</p>
+<p>TAPD支持将需求，缺陷，任务纳入迭代，除此之外，迭代功能还支持分配成员任务，进行任务的跟踪，以及打印迭代内容卡片这种额外的特性。在此，基础的迭代创建、需求添加、工作划分成为我们主要介绍的部分</p>
+<h5 id="创建迭代"><a href="#创建迭代" class="headerlink" title="创建迭代"></a>创建迭代</h5><p><img src="/2019/06/27/TAPD/15.png" alt></p>
+<h5 id="需求规划"><a href="#需求规划" class="headerlink" title="需求规划"></a>需求规划</h5><p>如果需求下有任务，那么规划需求到迭代的同时，需求下的任务自动被规划到迭代。使用拖拽或勾选添加的方式即可将需求划分入某次迭代。</p>
+<p>我们要注意，对于大型的需求（有众多子需求），TAPD不允许将父需求规划到迭代，这是因为在项目管理的过程中，过大规模的需求并不能保证能够在一个迭代期完成，单个迭代期应该完成的应该是一些小需求，相对来说这样设计才符合正确的项目规划逻辑。</p>
+<p><img src="/2019/06/27/TAPD/16.png" alt></p>
+<p><img src="/2019/06/27/TAPD/17.png" alt></p>
+<h5 id="工作划分"><a href="#工作划分" class="headerlink" title="工作划分"></a>工作划分</h5><p>在迭代管理的过程中，我们已经划分了需求，此时，作为项目管理者，我们需要做的就是将需求落实到负责人身上，保证每个任务的归属，这时候需要用到工作规划的功能。</p>
+<p>对于迭代内的需求，我们可以进行处理人和工时的设定，并以此作为迭代安排的目的计划方案。</p>
+<p><img src="/2019/06/27/TAPD/18.png" alt></p>
+<h4 id="看板"><a href="#看板" class="headerlink" title="看板"></a>看板</h4><p>在TAPD 看板中，一个工作项代表着一项的任务，你可以通过回车快速的创建多条任务，这就像工作中的白板一样简单。创建看板的方式有很多了，除了TAPD之外，github看板的创建也是十分方便，但是既然是介绍TAPD，就不多叙述对github看板的介绍了</p>
+<p>看板最主要的功能是使用小卡片的形式表示每一项任务，再将小卡片绘制到面板上，最终形成一面“任务墙”，这个任务墙就是看板。为了让任务的进度更加清晰，看板中的任务卡片还应该具有标注为已完成或未完成的功能，由此我们便可以快速直观地掌握当前任务的进行状态了。</p>
+<h5 id="创建看板"><a href="#创建看板" class="headerlink" title="创建看板"></a>创建看板</h5><p>很显然，看板中每一项任务都在不同的分类列下，我们可以通过创建新的列和任务进行看板的自助规划</p>
+<p><img src="/2019/06/27/TAPD/19.png" alt></p>
+<h5 id="关闭任务"><a href="#关闭任务" class="headerlink" title="关闭任务"></a>关闭任务</h5><p>看板中的任务通常使用checkbox的形式，关闭自然也是直接勾选即可。</p>
+<p><img src="/2019/06/27/TAPD/20.png" alt></p>
+<p>由此，我们便完成了对TAPD初级使用的分析，上面的介绍相对来说都只能满足基础的计划需求，感兴趣的各位可以查看<a href="https://www.tapd.cn/help" target="_blank" rel="noopener">TAPD的官方帮助文档</a>，写得十分详细了，本文中的图片素材就有一大部分是来自官方的帮助文档。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/项目开发/" rel="tag"># 项目开发</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/27/vuex/" rel="next" title="超级简单易懂的Vuex入门使用指南">
+                <i class="fa fa-chevron-left"></i> 超级简单易懂的Vuex入门使用指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Song Xiaotong">
+            
+              <p class="site-author-name" itemprop="name">Song Xiaotong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TAPD简介"><span class="nav-number">1.</span> <span class="nav-text">TAPD简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用指南"><span class="nav-number">2.</span> <span class="nav-text">使用指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务列表"><span class="nav-number">2.1.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线文档"><span class="nav-number">2.2.</span> <span class="nav-text">在线文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">2.3.</span> <span class="nav-text">项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目功能"><span class="nav-number">2.4.</span> <span class="nav-text">项目功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求"><span class="nav-number">2.4.1.</span> <span class="nav-text">需求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建需求"><span class="nav-number">2.4.1.1.</span> <span class="nav-text">创建需求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#层级划分"><span class="nav-number">2.4.1.2.</span> <span class="nav-text">层级划分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工作流管理"><span class="nav-number">2.4.1.3.</span> <span class="nav-text">工作流管理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代"><span class="nav-number">2.4.2.</span> <span class="nav-text">迭代</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建迭代"><span class="nav-number">2.4.2.1.</span> <span class="nav-text">创建迭代</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#需求规划"><span class="nav-number">2.4.2.2.</span> <span class="nav-text">需求规划</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工作划分"><span class="nav-number">2.4.2.3.</span> <span class="nav-text">工作划分</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#看板"><span class="nav-number">2.4.3.</span> <span class="nav-text">看板</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建看板"><span class="nav-number">2.4.3.1.</span> <span class="nav-text">创建看板</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关闭任务"><span class="nav-number">2.4.3.2.</span> <span class="nav-text">关闭任务</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Song Xiaotong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">~~本站共24k字呦~~</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
