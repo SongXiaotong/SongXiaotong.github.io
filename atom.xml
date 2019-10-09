@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-06T06:30:57.719Z</updated>
+  <updated>2019-10-09T15:58:13.234Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>django框架官方文档笔记之API Reference（1）：Applications</title>
+    <link href="http://yoursite.com/2019/10/09/django%E6%A1%86%E6%9E%B6%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/"/>
+    <id>http://yoursite.com/2019/10/09/django框架官方文档/</id>
+    <published>2019-10-09T05:02:29.000Z</published>
+    <updated>2019-10-09T15:58:13.234Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;应用程序-Applications&quot;&gt;&lt;a href=&quot;#应用程序-Applications&quot; class=&quot;headerlink&quot; title=&quot;应用程序 Applications&quot;&gt;&lt;/a&gt;应用程序 Applications&lt;/h2&gt;&lt;p&gt;django使用注册表为其中的应用存储配置并提供自查，同时，也保存了可用的模型列表，这种注册表就是apps，可以使用django.apps访问&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="backend" scheme="http://yoursite.com/tags/backend/"/>
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="document" scheme="http://yoursite.com/tags/document/"/>
+    
+  </entry>
   
   <entry>
     <title>shell脚本语言基础</title>
@@ -429,30 +455,6 @@
       <category term="homework" scheme="http://yoursite.com/tags/homework/"/>
     
       <category term="points" scheme="http://yoursite.com/tags/points/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Min Edit Distance</title>
-    <link href="http://yoursite.com/2019/03/06/Min-Edit-Distance/"/>
-    <id>http://yoursite.com/2019/03/06/Min-Edit-Distance/</id>
-    <published>2019-03-06T11:56:17.000Z</published>
-    <updated>2019-03-25T08:09:24.534Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;用例&quot;&gt;&lt;a href=&quot;#用例&quot; class=&quot;headerlink&quot; title=&quot;用例&quot;&gt;&lt;/a&gt;用例&lt;/h3&gt;&lt;p&gt;问：最少操作多少次可以把字符串T变为S？&lt;br&gt;例：S=“ABCF”，T=“DBFG”&lt;br&gt;则可以&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
-    
-    
-      <category term="algorithm" scheme="http://yoursite.com/tags/algorithm/"/>
-    
-      <category term="dp" scheme="http://yoursite.com/tags/dp/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

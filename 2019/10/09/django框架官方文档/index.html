@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="python,backend,django,document,">
 
 
 
@@ -81,13 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Trevi Fountain">
-<meta property="og:url" content="http://yoursite.com/categories/web-security/index.html">
+<meta name="description" content="应用程序 Applicationsdjango使用注册表为其中的应用存储配置并提供自查，同时，也保存了可用的模型列表，这种注册表就是apps，可以使用django.apps访问">
+<meta name="keywords" content="python,backend,django,document">
+<meta property="og:type" content="article">
+<meta property="og:title" content="django框架官方文档笔记之API Reference（1）：Applications">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/django框架官方文档/index.html">
 <meta property="og:site_name" content="Trevi Fountain">
+<meta property="og:description" content="应用程序 Applicationsdjango使用注册表为其中的应用存储配置并提供自查，同时，也保存了可用的模型列表，这种注册表就是apps，可以使用django.apps访问">
 <meta property="og:locale" content="zh-Hang">
+<meta property="og:updated_time" content="2019-10-09T15:58:13.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trevi Fountain">
+<meta name="twitter:title" content="django框架官方文档笔记之API Reference（1）：Applications">
+<meta name="twitter:description" content="应用程序 Applicationsdjango使用注册表为其中的应用存储配置并提供自查，同时，也保存了可用的模型列表，这种注册表就是apps，可以使用django.apps访问">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/web-security/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/09/django框架官方文档/">
 
 
 
 
 
-  <title>Category: web-security | Trevi Fountain</title>
+  <title>django框架官方文档笔记之API Reference（1）：Applications | Trevi Fountain</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,53 +283,234 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>web-security<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/django框架官方文档/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Xiaotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trevi Fountain">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/19/DES/" itemprop="url">
-              
-                <span itemprop="name">Data Encryption Standard</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">django框架官方文档笔记之API Reference（1）：Applications</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-19T00:06:57+08:00" content="2019-03-19">
-          03-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-09T13:02:29+08:00">
+                2019-10-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/django/" itemprop="url" rel="index">
+                    <span itemprop="name">django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <h2 id="应用程序-Applications"><a href="#应用程序-Applications" class="headerlink" title="应用程序 Applications"></a>应用程序 Applications</h2><p>django使用注册表为其中的应用存储配置并提供自查，同时，也保存了可用的模型列表，这种注册表就是apps，可以使用django.apps访问</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> django.apps <span class="keyword">import</span> apps</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>apps.get_app_config(<span class="string">'admin'</span>).verbose_name</span><br><span class="line"><span class="string">'Administration'</span></span><br></pre></td></tr></table></figure>
+<h3 id="项目和应用程序-Projects-and-applications"><a href="#项目和应用程序-Projects-and-applications" class="headerlink" title="项目和应用程序 Projects and applications"></a>项目和应用程序 Projects and applications</h3><p>project就是我们所说的一个web应用，当在django中使用<strong>django-admin startproject mysite</strong>命令时，就会在项目根目录下创建出一个mysite文件夹，其中包含的settings.py, urls.py, wsgi.py就是一个python包。</p>
+<p>Application是提供某些功能的软件包，使用<strong>python manage.py startapp appname</strong>命令时，就会在项目根目录下创建出一个appname文件夹，其中包含model，view，templates，template tags，static files，urls，middleware等。需要在project的INSTALLED_APPS中完成application的链接。（在project的settings.py中，向INSTALLED_APPS中添加对应app的名字，即可成功将app链入project）</p>
+<p>django主要是协助完成各个模块之间的交互，可以理解为是在project调控下的，各个application完成相应的交互。也就是说我们的web是由project组织的各个application的响应。</p>
+<h3 id="配置应用程序-Configuring-applications"><a href="#配置应用程序-Configuring-applications" class="headerlink" title="配置应用程序 Configuring applications"></a>配置应用程序 Configuring applications</h3><p>对于app的配置需要使用到AppConfig类，如果设置中有人为的default_app_config变量（init文件中），那么django会使用对应的定义，如果没有，会直接使用AppConfig的基类，1.7版本之后的app尽量避免使用default_app_config</p>
+<h4 id="开发者-For-application-authors"><a href="#开发者-For-application-authors" class="headerlink" title="开发者 For application authors"></a>开发者 For application authors</h4><p>如果想要创建一个名为“Rock ‘n’ roll”的可插拔应用，首先需要创建一个子类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rock_n_roll/apps.py</span></span><br><span class="line"><span class="keyword">from</span> django.apps <span class="keyword">import</span> AppConfig</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RockNRollConfig</span><span class="params">(AppConfig)</span>:</span></span><br><span class="line">    name = <span class="string">'rock_n_roll'</span></span><br><span class="line">    verbose_name = <span class="string">"Rock 'n' roll"</span></span><br></pre></td></tr></table></figure>
+<p>然后默认加载这个类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rock_n_roll/__init__.py</span></span><br><span class="line">default_app_config = <span class="string">'rock_n_roll.apps.RockNRollConfig'</span></span><br></pre></td></tr></table></figure>
+<p>当INSTALLED_APPS仅包含rock_n_roll时，RockNRollConfig会被使用，此时不需要更新INSTALLED_APPS的设置就可以使用AppConfig。如果不是这种情况，最好不要使用default_app_config，而是在INSTALLED_APPS中设置</p>
+<p>如果在代码中将app的注册表导入到init文件中，那么名称apps会和apps子模块冲突，最好将代码转移到子模块中再导入，可以使用如下方法避免这种冲突</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.apps <span class="keyword">import</span> apps <span class="keyword">as</span> django_apps</span><br></pre></td></tr></table></figure>
+<h4 id="使用者-For-application-users"><a href="#使用者-For-application-users" class="headerlink" title="使用者 For application users"></a>使用者 For application users</h4><p>当你需要在一个名为anthology的项目中使用“Rock ‘n’ roll”模型，但是又想用“Jazz Manouche”来显示的时候，可以用如下的方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># anthology/apps.py</span></span><br><span class="line"><span class="keyword">from</span> rock_n_roll.apps <span class="keyword">import</span> RockRollConfig</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JazzManoucheConfig</span><span class="params">(RockNDRollConfig)</span>:</span></span><br><span class="line">    verbose_name = <span class="string">"Jazz Manouche"</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># anthology/settings.py</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'anthology.apps.JazzMunoucheConfig'</span>,</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>要在子模块中定义项目特定的类app的配置</p>
+<h3 id="Application-configuration"><a href="#Application-configuration" class="headerlink" title="Application configuration"></a>Application configuration</h3><p>AppConfig是一个类，存储了app的元数据，某些属性可以在AppConfig子类中定义，其他都是Django预设的可读性质</p>
+<h4 id="Configurable-attributes-4"><a href="#Configurable-attributes-4" class="headerlink" title="Configurable attributes 4"></a>Configurable attributes 4</h4><ol>
+<li>AppConfig.name<ol>
+<li>完整的路径名称，如“django.contrib.admin”</li>
+<li>明确定义了配置指向的对象，一定要设置</li>
+<li>在整个django项目中要保持唯一性</li>
+</ol>
+</li>
+<li>AppConfig.label<ol>
+<li>app的简写，如admin</li>
+<li>label默认为name的最后一个部分（有效的标识符），但是当两个app发生label的冲突时，这个属性可以对label进行重设</li>
+<li>在整个django项目中，label要保持唯一性</li>
+</ol>
+</li>
+<li>AppConfig.verbose_name<ol>
+<li>人工可读性比较高的另一个名称，如“Administration”</li>
+<li>这个属性默认为label.title()</li>
+</ol>
+</li>
+<li>AppConfig.path<ol>
+<li>app的文件路径位置，如“usr/lib/python3.4/dist-packages/django/contrib/admin”</li>
+<li>一般来说，django可以自动检测并且设置这个属性，但是也可以进行重写；当app包是一个有很多路径的命名空间的包时，就会需要。</li>
+</ol>
+</li>
+</ol>
+<h4 id="Read-only-attributes-2"><a href="#Read-only-attributes-2" class="headerlink" title="Read-only attributes 2"></a>Read-only attributes 2</h4><ol>
+<li>AppConfig.module<ol>
+<li>app的根模块</li>
+<li>如“module ‘django.contrib.admin’ from ‘django/contrib/admin/<strong>init</strong>.pyc’”</li>
+</ol>
+</li>
+<li>Appconfig.models_module<ol>
+<li>包含models的模块</li>
+<li>如module ‘django.contrib,admin.models’ from ‘django/contrib/admin/models.pyc</li>
+<li>当app中没有model时，可能为None，要注意，数据库相关的信号如pre_migrate 和 post_migrate都只能由存在model的app发出</li>
+</ol>
+</li>
+</ol>
+<h4 id="Methods-3"><a href="#Methods-3" class="headerlink" title="Methods 3"></a>Methods 3</h4><ol>
+<li>AppConfig.get_models()</li>
+<li>AppConfig.get_model(model_name, require_ready=True)</li>
+<li>AppConfig.ready()</li>
+</ol>
+<h4 id="Namespace-packages-as-apps-Python-3-3"><a href="#Namespace-packages-as-apps-Python-3-3" class="headerlink" title="Namespace packages as apps(Python 3.3+)"></a>Namespace packages as apps(Python 3.3+)</h4><h3 id="Application-registry"><a href="#Application-registry" class="headerlink" title="Application registry"></a>Application registry</h3><h3 id="Initialization-process"><a href="#Initialization-process" class="headerlink" title="Initialization  process"></a>Initialization  process</h3><h4 id="How-applications-are-loaded"><a href="#How-applications-are-loaded" class="headerlink" title="How applications are loaded"></a>How applications are loaded</h4><h4 id="Toubleshooting"><a href="#Toubleshooting" class="headerlink" title="Toubleshooting"></a>Toubleshooting</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/backend/" rel="tag"># backend</a>
+          
+            <a href="/tags/django/" rel="tag"># django</a>
+          
+            <a href="/tags/document/" rel="tag"># document</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/06/shell脚本语言基础/" rel="next" title="shell脚本语言基础">
+                <i class="fa fa-chevron-left"></i> shell脚本语言基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -332,6 +518,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -352,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -422,6 +621,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用程序-Applications"><span class="nav-number">1.</span> <span class="nav-text">应用程序 Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目和应用程序-Projects-and-applications"><span class="nav-number">1.1.</span> <span class="nav-text">项目和应用程序 Projects and applications</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置应用程序-Configuring-applications"><span class="nav-number">1.2.</span> <span class="nav-text">配置应用程序 Configuring applications</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开发者-For-application-authors"><span class="nav-number">1.2.1.</span> <span class="nav-text">开发者 For application authors</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用者-For-application-users"><span class="nav-number">1.2.2.</span> <span class="nav-text">使用者 For application users</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Application-configuration"><span class="nav-number">1.3.</span> <span class="nav-text">Application configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Configurable-attributes-4"><span class="nav-number">1.3.1.</span> <span class="nav-text">Configurable attributes 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Read-only-attributes-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Read-only attributes 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Methods-3"><span class="nav-number">1.3.3.</span> <span class="nav-text">Methods 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Namespace-packages-as-apps-Python-3-3"><span class="nav-number">1.3.4.</span> <span class="nav-text">Namespace packages as apps(Python 3.3+)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Application-registry"><span class="nav-number">1.4.</span> <span class="nav-text">Application registry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Initialization-process"><span class="nav-number">1.5.</span> <span class="nav-text">Initialization  process</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#How-applications-are-loaded"><span class="nav-number">1.5.1.</span> <span class="nav-text">How applications are loaded</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Toubleshooting"><span class="nav-number">1.5.2.</span> <span class="nav-text">Toubleshooting</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -576,6 +791,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
